@@ -1,0 +1,8 @@
+:root {
+    --background-color: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.466) 0%,
+            rgba(153, 41, 41, 0.418) 100%);
+    ;
+    --text-color: white;
+    --themebuttontogglesvg: scale(-1,1);
+}

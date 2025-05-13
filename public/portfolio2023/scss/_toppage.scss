@@ -1,0 +1,167 @@
+@mixin topcontainerbackground(
+  $cbi1,
+  $cbi2,
+  $cbi3,
+  $cbi4,
+  $cbi5,
+  $cbi6,
+  $cbi7,
+  $cbi8,
+  $cbi9,
+  $cbs1,
+  $cbs2,
+  $cbs3,
+  $cbs4,
+  $cbs5,
+  $cbs6,
+  $cbs7,
+  $cbs8,
+  $cbs9,
+  $cbp1,
+  $cbp2,
+  $cbp3,
+  $cbp4,
+  $cbp5,
+  $cbp6,
+  $cbp7,
+  $cbp8,
+  $cbp9
+) {
+  background-image: radial-gradient(
+      $cbi1,
+      rgba(223, 164, 164, 0.587) 20%,
+      transparent 21.5%
+    ),
+    radial-gradient($cbi2, rgb(151, 165, 94) 20%, transparent 21.5%),
+    radial-gradient($cbi3, rgba(84, 70, 146, 0.579) 20%, transparent 21.5%),
+    radial-gradient($cbi4, rgba(207, 37, 37, 0.689) 20%, transparent 21.5%),
+    radial-gradient($cbi5, rgba(86, 223, 58, 0.511) 20%, transparent 21.5%),
+    radial-gradient($cbi6, rgba(163, 57, 184, 0.552) 20%, transparent 21.5%),
+    radial-gradient($cbi7, rgba(255, 255, 255, 0.727) 20%, transparent 21.5%),
+    radial-gradient($cbi8, rgba(209, 184, 41, 0.552) 20%, transparent 21.5%),
+    radial-gradient($cbi9, rgba(57, 198, 186, 0.734) 20%, transparent 21.5%);
+  background-size: $cbs1, $cbs2, $cbs3, $cbs4, $cbs5, $cbs6, $cbs7, $cbs8, $cbs9;
+  background-position: $cbp1, $cbp2, $cbp3, $cbp4, $cbp5, $cbp6, $cbp7, $cbp8,
+    $cbp9;
+}
+
+.container {
+  @include res(pc) {
+    @include topcontainerbackground(
+      50px 50px,
+      25px 25px,
+      30px 30px,
+      40px 40px,
+      34px 34px,
+      35px 35px,
+      45px 45px,
+      25px 25px,
+      20px 20px,
+      600px 1300px,
+      1200px 500px,
+      1100px 900px,
+      700px 2000px,
+      500px 500px,
+      700px 1200px,
+      600px 500px,
+      1200px 500px,
+      1050px 1000px,
+      100px 0px,
+      50px 100px,
+      20px 700px,
+      70px 20px,
+      200px 60px,
+      50px 700px,
+      -200px 700px,
+      -350px -150px,
+      60px 20px
+    );
+  }
+
+  @include res(medium) {
+    @include topcontainerbackground(
+      50px 50px,
+      25px 25px,
+      30px 30px,
+      40px 40px,
+      34px 34px,
+      35px 35px,
+      45px 45px,
+      25px 25px,
+      20px 20px,
+      600px 1300px,
+      1200px 500px,
+      1100px 900px,
+      700px 2000px,
+      500px 500px,
+      700px 1200px,
+      600px 500px,
+      1200px 500px,
+      1050px 1000px,
+      100px 0px,
+      50px 100px,
+      20px 700px,
+      70px 20px,
+      200px 60px,
+      50px 700px,
+      -200px 700px,
+      -350px -150px,
+      60px 20px
+    );
+  }
+
+  @include res(mobile) {
+    @include topcontainerbackground(
+      25px 25px,
+      12.5px 12.5px,
+      15px 15px,
+      20px 20px,
+      17px 17px,
+      17.5px 17.5px,
+      22.5px 22.5px,
+      12.5px 12.5px,
+      10px 10px,
+      300px 650px,
+      600px 250px,
+      550px 450px,
+      350px 1000px,
+      250px 250px,
+      350px 600px,
+      300px 250px,
+      600px 250px,
+      525px 500px,
+      50px 0px,
+      25px 50px,
+      10px 350px,
+      35px 10px,
+      -60px 30px,
+      -25px 350px,
+      -100px 350px,
+      -125px -75px,
+      30px 10px
+    );
+  }
+}
+
+@mixin topwrapper($topwrapperwidth) {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: $topwrapperwidth;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper {
+  @include res(pc) {
+    @include topwrapper(1600px);
+  }
+  @include res(medium) {
+    @include topwrapper(100%);
+    transform: scale(0.85);
+  }
+
+  @include res(mobile) {
+    @include topwrapper(100%);
+  }
+}

@@ -1,0 +1,52 @@
+@mixin titlesize($titlefont){
+    position: fixed;
+    z-index: 100;
+
+    h1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: $titlefont;
+    }
+}
+
+#title {
+    @include res(xl) {
+        @include titlesize(14rem);
+    }
+
+    @include res(lg) {
+        @include titlesize(11.5rem);
+    }
+
+    @include res(md) {
+        @include titlesize(10rem);
+    }
+
+    @include res(sm) {
+        @include titlesize(7.5rem);
+    }
+    @include res(xs) {
+        @include titlesize(6rem);
+    }
+}
+
+.midnightInner {
+    height: 100vh;
+}
+
+.top-mn {
+    color: #fff;
+    background: none;
+}
+
+.black {
+    color: rgb(34, 12, 53);
+    background: #000;
+}
+
+.white {
+    color: #bdbdbd;
+    background: #fff;
+}

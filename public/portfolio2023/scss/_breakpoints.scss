@@ -1,0 +1,30 @@
+$breakpoints: (
+    mobile: 768px,
+    medium: 1599px,
+    pc: 1600px,
+);
+
+@mixin res($breakpoint) {
+    @if $breakpoint ==pc {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+/*
+    @include res(pc) {
+    }
+
+    @include res(medium) {
+    }
+
+    @include res(mobile) {
+    }
+*/

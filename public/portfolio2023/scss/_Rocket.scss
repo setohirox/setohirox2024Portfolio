@@ -1,0 +1,246 @@
+.L-Rocket {
+    position: absolute;
+    top: 40%;
+    animation: L-Rocket-move 4.1s linear forwards;
+
+    @keyframes L-Rocket-move {
+        0% {
+            transform: translate(0px) scale(2);
+        }
+
+        65% {
+            transform: translateY(30px) scale(2);
+        }
+
+        100% {
+            transform: translateY(-3000px) scale(2);
+        }
+    }
+
+    @include res(mobile) {
+        @keyframes L-Rocket-move {
+            0% {
+                transform: translate(0px) scale(1.5);
+            }
+
+            65% {
+                transform: translateY(30px) scale(1.5);
+            }
+
+            100% {
+                transform: translateY(-3000px) scale(1.5);
+            }
+        }
+    }
+}
+
+.page-fade{
+    display: none;
+}
+.page-fadeout {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    animation: fadeout 4.1s linear forwards;
+    z-index: 99999;
+
+    @keyframes fadeout {
+        0% {
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 1;
+            background: $dark-theme;
+        }
+
+        100% {
+            opacity: 1;
+            background: $dark-theme;
+        }
+    }
+
+    .F-Rocket {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        animation: F-Rocket-move 4.1s linear forwards;
+
+        @keyframes F-Rocket-move {
+            0% {
+                transform: translateY(0px) translateX(-50%) scale(2);
+                opacity: 0;
+            }
+
+            15% {
+                transform: translateY(0px) translateX(-50%) scale(2);
+                opacity: 1;
+            }
+
+            75% {
+                transform: translateY(30px) translateX(-50%) scale(2);
+            }
+
+            100% {
+                transform: translateY(-3000px) translateX(-50%) scale(2);
+            }
+        }
+
+        @include res(mobile) {
+            @keyframes F-Rocket-move {
+                0% {
+                    transform: translateY(0px) translateX(-50%) scale(1.5);
+                    opacity: 0;
+                }
+
+                15% {
+                    transform: translateY(0px) translateX(-50%) scale(1.5);
+                    opacity: 1;
+                }
+
+                75% {
+                    transform: translateY(30px) translateX(-50%) scale(1.5);
+                }
+
+                100% {
+                    transform: translateY(-3000px) translateX(-50%) scale(1.5);
+                }
+            }
+        }
+    }
+}
+
+.Rocket-rotate {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    animation: Rocket-spin 10s infinite linear;
+
+    @keyframes Rocket-spin {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @include res(mobile) {
+        width: 170px;
+        height: 170px;
+        top: 23%;
+        margin: -35px;
+    }
+
+    .M-Rocket {
+        position: absolute;
+        top: 170px;
+        left: -23px;
+
+        @include res(mobile) {
+            left: -14%;
+            top: 35%;
+            transform: scale(0.45);
+        }
+    }
+}
+
+$Rocket-color: #ef4848;
+
+.M-Rocket,
+.F-Rocket,
+.L-Rocket {
+    .Rocket-body {
+        overflow: hidden;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(234, 233, 233);
+        border-radius: 100% 0 100% 0;
+        transform: rotate(-45deg);
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+
+        .Rocket-top {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: $Rocket-color;
+            right: -34%;
+            top: -34%;
+            transform: rotate(45deg);
+        }
+
+        .Rocket-window {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: linear-gradient(180deg, rgba(97, 217, 255, 1) 0%, rgba(255, 255, 255, 1) 100%);
+            border: solid 0.5px gray;
+            border-radius: 50%;
+            right: 10px;
+            top: 10px;
+        }
+    }
+
+    .Rocket-bottom {
+        position: absolute;
+        width: 20px;
+        height: 6px;
+        background-color: gray;
+        left: 15px;
+        top: 53px;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 15px;
+        background-color: $Rocket-color;
+        top: 33px;
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 20px;
+        background: linear-gradient(#00d0ff, #00d0ff40, transparent);
+        filter: blur(1px);
+        left: 20px;
+        top: 56px;
+        border-radius: 40% 40% 50% 50% / 15% 15% 85% 85%;
+        z-index: -1;
+        animation: Rocket-fire 0.8s infinite ease-in-out alternate;
+
+        @keyframes Rocket-fire {
+
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0.9);
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.Rocket-light {
+    $Rocket-color-light: rgb(27, 24, 211);
+
+    .Rocket-body {
+        background-color: rgb(192, 192, 192);
+
+        .Rocket-top {
+            background-color: $Rocket-color-light;
+        }
+    }
+
+    &::before {
+        background-color: $Rocket-color-light;
+    }
+}

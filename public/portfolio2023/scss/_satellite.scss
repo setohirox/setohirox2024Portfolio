@@ -1,0 +1,279 @@
+@mixin satellite($satellitetop, $satelliteleft) {
+    position: absolute;
+    top: $satellitetop;
+    left: $satelliteleft;
+}
+
+@mixin satellite_top {
+    .satellite-top {
+        .parabolic {
+            position: absolute;
+            width: 600px;
+            height: 250px;
+            left: -50px;
+            top: -255px;
+            background-color: rgb(185, 197, 77);
+            border-radius: 0 0 290px 290px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 300px;
+                height: 35px;
+                border-radius: 15px;
+                background-color: #808080;
+                top: 230px;
+                left: 150px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 630px;
+                height: 30px;
+                background-color: #808080;
+                top: -30px;
+                left: -15px;
+                border-radius: 15px;
+            }
+        }
+
+        .antenna {
+            position: absolute;
+            width: 600px;
+            height: 500px;
+            top: -770px;
+            left: -50px;
+            background: repeating-conic-gradient(rgb(169, 169, 169) 0 4%, #0000 0% 12%);
+            clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+            z-index: -1;
+        }
+
+        .antenna2 {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgb(185, 197, 77);
+            left: 219px;
+            top: -640px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 80px;
+                background-color: rgb(169, 169, 169);
+                left: 25.5px;
+                top: 60px;
+            }
+        }
+    }
+}
+
+@mixin satellite_body {
+    .satellite-body {
+        width: 500px;
+        height: 750px;
+        background-color: #d4531c;
+        border-radius: 10%;
+    }
+}
+
+@mixin satellitewing($satellitewingbeforeboxshadow, $satellitewingafterboxshadow) {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: #306ea8;
+    background-image:
+        repeating-linear-gradient(to bottom,
+            rgb(184, 184, 184), 40px,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0) 180px),
+        repeating-linear-gradient(to right,
+            rgb(184, 184, 184), 40px,
+            rgba(0, 0, 0, 0) 0,
+            rgba(0, 0, 0, 0) 240px);
+    top: 150px;
+    border-radius: 25px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 150px;
+        height: 30px;
+        background-color: rgb(184, 184, 184);
+        top: 100px;
+        box-shadow: $satellitewingbeforeboxshadow;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 150px;
+        height: 30px;
+        top: 250px;
+        background-color: rgb(184, 184, 184);
+        box-shadow: $satellitewingafterboxshadow;
+    }
+}
+
+@mixin satellite_bottom {
+    .satellite-bottom {
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        left: 100px;
+        top: 650px;
+        background-color: gray;
+        border-radius: 35%;
+        z-index: -1;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 200px;
+            height: 50px;
+            top: 180px;
+            left: 50px;
+            background-color: rgb(197, 91, 91);
+            border-radius: 25%;
+        }
+    }
+}
+
+.satellite {
+    @include res(pc) {
+        @include satellite(-60px, -380px);
+        animation: satellite-anim 5s linear infinite alternate;
+
+        @keyframes satellite-anim {
+            0% {
+                transform: translateX(0) scale(0.04) rotate(40deg);
+            }
+
+            100% {
+                transform: translateX(200px) scale(0.04) rotate(40deg);
+            }
+        }
+
+        @include satellite_top;
+        @include satellite_body;
+
+        .satellite-right {
+            @include satellitewing(-25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset, -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset);
+            left: 650px;
+
+            &::before {
+                left: -150px;
+            }
+
+            &::after {
+                left: -150px;
+            }
+        }
+
+        .satellite-left {
+            @include satellitewing(25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset, 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset);
+            right: 650px;
+
+            &::before {
+                right: -150px;
+            }
+
+            &::after {
+                right: -150px;
+            }
+        }
+        @include satellite_bottom;
+    }
+    @include res(medium) {
+        @include satellite(-60px, -380px);
+        animation: satellite-anim 5s linear infinite alternate;
+
+        @keyframes satellite-anim {
+            0% {
+                transform: translateX(0) scale(0.04) rotate(40deg);
+            }
+
+            100% {
+                transform: translateX(200px) scale(0.04) rotate(40deg);
+            }
+        }
+
+        @include satellite_top;
+        @include satellite_body;
+
+        .satellite-right {
+            @include satellitewing(-25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset, -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset);
+            left: 650px;
+
+            &::before {
+                left: -150px;
+            }
+
+            &::after {
+                left: -150px;
+            }
+        }
+
+        .satellite-left {
+            @include satellitewing(25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset, 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset);
+            right: 650px;
+
+            &::before {
+                right: -150px;
+            }
+
+            &::after {
+                right: -150px;
+            }
+        }
+        @include satellite_bottom;
+    }
+
+    @include res(mobile) {
+        @include satellite(-670, -180px);
+        animation: satellite-anim-small 5s linear infinite alternate;
+
+        @keyframes satellite-anim-small {
+            0% {
+                transform: translateX(0) scale(0.025) rotate(40deg);
+            }
+
+            100% {
+                transform: translateX(150px) scale(0.025) rotate(40deg);
+            }
+        }
+
+        @include satellite_top;
+        @include satellite_body;
+
+        .satellite-right {
+            @include satellitewing(-25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset, -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset);
+            left: 650px;
+
+            &::before {
+                left: -150px;
+            }
+
+            &::after {
+                left: -150px;
+            }
+        }
+
+        .satellite-left {
+            @include satellitewing(25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset, 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset);
+            right: 650px;
+
+            &::before {
+                right: -150px;
+            }
+
+            &::after {
+                right: -150px;
+            }
+        }
+        @include satellite_bottom;
+    }
+}

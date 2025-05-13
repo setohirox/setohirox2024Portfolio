@@ -1,0 +1,510 @@
+@mixin alien($alienpositiontop, $alienpositionleft) {
+    position: absolute;
+    top: $alienpositiontop;
+    right: $alienpositionleft;
+}
+
+$alienbodycolor1: #8d8d8d;
+$alienbodycolor2: #4d4d4d;
+@mixin alien_head {
+    .alien-head {
+        position: absolute;
+        width: 161px;
+        height: 140px;
+        background-color: $alienbodycolor1;
+        border-radius: 50% 50% 32% 33% / 50% 50% 50% 50%;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 80.5px;
+            height: 100px;
+            top: 85px;
+            background-color: $alienbodycolor1;
+            border-radius: 0 0 0% 100%;
+            transform: skewY(20deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 80.5px;
+            height: 100px;
+            top: 85px;
+            right: 1px;
+            background-color: $alienbodycolor1;
+            border-radius: 0 0 100% 0%;
+            transform: skewY(-20deg);
+        }
+    }
+
+    .eye1 {
+        position: absolute;
+        width: 70px;
+        height: 60px;
+        top: 70px;
+        left: 95.5px;
+        background-color: $alienbodycolor1;
+        border-radius: 57% 43% 70% 3% / 70% 43% 57% 3%;
+        overflow: hidden;
+        isolation: isolate;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 70px;
+            background-color: $alienbodycolor1;
+            animation: eye1-blink 3s infinite linear alternate;
+
+            @keyframes eye1-blink {
+                0% {
+                    transform: translateY(0);
+                }
+
+                90% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(-100px);
+                }
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 50px;
+            top: 6px;
+            left: 4px;
+            background-color: $alienbodycolor2;
+            border-radius: 57% 43% 70% 3% / 70% 43% 57% 3%;
+        }
+
+        .eye-in {
+            position: absolute;
+            content: "";
+            width: 48px;
+            height: 35px;
+            top: 17px;
+            left: 9px;
+            background: rgb(100, 100, 100);
+            border-radius: 57% 43% 70% 3% / 70% 43% 57% 3%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            isolation: isolate;
+
+            .eye-ball {
+                width: 20px;
+                height: 20px;
+                background: #ffffff;
+                position: absolute;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .eye2 {
+        position: absolute;
+        width: 70px;
+        height: 60px;
+        top: 70px;
+        left: -5.5px;
+        background-color: $alienbodycolor1;
+        border-radius: 43% 57% 3% 70% / 43% 70% 3% 57%;
+        overflow: hidden;
+        isolation: isolate;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 70px;
+            background-color: $alienbodycolor1;
+            animation: eye1-blink 3s infinite linear alternate;
+
+            @keyframes eye1-blink {
+                0% {
+                    transform: translateY(-100px);
+                }
+
+                90% {
+                    transform: translateY(-100px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 60px;
+            height: 50px;
+            top: 6px;
+            left: 4px;
+            background-color: $alienbodycolor2;
+            border-radius: 43% 57% 3% 70% / 43% 70% 3% 57%;
+        }
+
+        .eye-in {
+            position: absolute;
+            content: "";
+            width: 48px;
+            height: 35px;
+            top: 17px;
+            left: 9px;
+            background: rgb(100, 100, 100);
+            border-radius: 43% 57% 3% 70% / 43% 70% 3% 57%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            isolation: isolate;
+
+            .eye-ball {
+                width: 20px;
+                height: 20px;
+                background: #ffffff;
+                position: absolute;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .nose {
+        position: absolute;
+        width: 4px;
+        height: 3px;
+        background-color: $alienbodycolor2;
+        border-radius: 45%;
+        top: 143px;
+        left: 74.5px;
+        transform: rotate(35deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 3px;
+            left: 6.5px;
+            top: -4.4px;
+            background-color: $alienbodycolor2;
+            border-radius: 45%;
+            transform: rotate(-70deg);
+        }
+    }
+
+    .mouth {
+        position: absolute;
+        width: 30px;
+        height: 35px;
+        top: 130px;
+        left: 65.5px;
+        border-radius: 50%;
+        border: solid 3px $alienbodycolor2;
+        clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+    }
+
+    .neck {
+        z-index: -1;
+        position: absolute;
+        width: 50px;
+        height: 60px;
+        background-color: $alienbodycolor1;
+        left: 55px;
+        top: 170px;
+        box-shadow: 0 16.5em 1em -14em rgb(98, 98, 98) inset,
+    }
+
+}
+
+@mixin alien_body-arm($alienarmsrotate, $alienarmsrotatebefore) {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -5px;
+    background-color: $alienbodycolor1;
+    border-radius: 45%;
+    transform: rotate($alienarmsrotate);
+    &::before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 150px;
+        background-color: $alienbodycolor1;
+        border-radius: 45%;
+        top: 30px;
+        transform: rotate($alienarmsrotatebefore);
+    }
+}
+
+@mixin alien_body-hand($alienhandtop, $alienhandleft, $alienhandbeforetop) {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: $alienbodycolor1;
+    border-radius: 45%;
+    top: $alienhandtop;
+    left: $alienhandleft;
+    transform: scale(1.2);
+
+    div {
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        width: 20px;
+        height: 70px;
+        overflow: hidden;
+        transform: rotate(-20deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 40px;
+            height: 70px;
+            left: 10px;
+            border-radius: 50%;
+            border: solid 5px $alienbodycolor1;
+        }
+
+        &:nth-of-type(1) {
+            position: absolute;
+            width: 20px;
+            height: 70px;
+            left: 17px;
+            top: -35px;
+            transform: scale(-1, 1) rotate(-30deg);
+        }
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #ffff00;
+        border-radius: 50%;
+        z-index: 1;
+        top: $alienhandbeforetop;
+        left: -5px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #ffff00;
+        border-radius: 50%;
+        left: 25px;
+        top: -35px;
+        z-index: 1;
+    }
+}
+
+@mixin alien_body-leg($alienlegrotate,$alienlegbeforeleft,$alienlegbeforerotate,$alienlegafterleft) {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: $alienbodycolor1;
+    top: 240px;
+    border-radius: 30%;
+    transform: rotate($alienlegrotate);
+    &::before {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 150px;
+        background-color: $alienbodycolor1;
+        border-radius: 30%;
+        top: 40px;
+        left: $alienlegbeforeleft;
+        transform: rotate($alienlegbeforerotate);
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 40px;
+        background-color: $alienbodycolor1;
+        border-radius: 50% 30% 35% 35%;
+        top: 151px;
+        left: $alienlegafterleft;
+    }
+}
+
+@mixin alien_body {
+    .alien-body {
+        z-index: -2;
+        position: absolute;
+        width: 161px;
+        height: 300px;
+        background-color: $alienbodycolor1;
+        top: 215px;
+        left: 0px;
+        border-radius: 45%;
+    }
+}
+
+.alien {
+    @include res(pc) {
+        @include alien(130px, -350px);
+        animation: alien-move 7s infinite linear alternate;
+
+        @keyframes alien-move {
+            0% {
+                transform: translateY(0) rotate(-15deg) scale(1.4);
+            }
+
+            100% {
+                transform: translateY(-50px) rotate(-15deg) scale(1.4);
+            }
+        }
+
+        @include alien_head;
+        @include alien_body;
+
+        .alien-body {
+            .arm1 {
+                @include alien_body-arm(35deg, -60deg);
+                left: -20px;
+                &::before{
+                    left: -55px;
+                }
+            }
+
+            .arm2 {
+                @include alien_body-arm(-35deg, 60deg);
+                right: -20px;
+                &::before{
+                    right: -55px;
+                }
+            }
+
+            .hand1 {
+                @include alien_body-hand(-25px, -102px, -30px);
+            }
+
+            .hand2 {
+                @include alien_body-hand(-25px, 232px, -27px);
+            }
+            .leg1{
+                @include alien_body-leg(20deg,11px,-15deg,-8px);
+                left: -20px;
+            }
+            .leg2{
+                @include alien_body-leg(-20deg,-11px,15deg,-20px);
+                right: -20px;
+            }
+        }
+    }
+    @include res(medium) {
+        @include alien(130px, -350px);
+        animation: alien-move 7s infinite linear alternate;
+
+        @keyframes alien-move {
+            0% {
+                transform: translateY(0) rotate(-15deg) scale(1.4);
+            }
+
+            100% {
+                transform: translateY(-50px) rotate(-15deg) scale(1.4);
+            }
+        }
+
+        @include alien_head;
+        @include alien_body;
+
+        .alien-body {
+            .arm1 {
+                @include alien_body-arm(35deg, -60deg);
+                left: -20px;
+                &::before{
+                    left: -55px;
+                }
+            }
+
+            .arm2 {
+                @include alien_body-arm(-35deg, 60deg);
+                right: -20px;
+                &::before{
+                    right: -55px;
+                }
+            }
+
+            .hand1 {
+                @include alien_body-hand(-25px, -102px, -30px);
+            }
+
+            .hand2 {
+                @include alien_body-hand(-25px, 232px, -27px);
+            }
+            .leg1{
+                @include alien_body-leg(20deg,11px,-15deg,-8px);
+                left: -20px;
+            }
+            .leg2{
+                @include alien_body-leg(-20deg,-11px,15deg,-20px);
+                right: -20px;
+            }
+        }
+    }
+    @include res(mobile) {
+        @include alien(180px, -50px);
+        animation: alien-move-small 7s infinite linear alternate;
+
+        @keyframes alien-move-small {
+            0% {
+                transform: translateY(0) rotate(-15deg) scale(0.5);
+            }
+
+            100% {
+                transform: translateY(-50px) rotate(-15deg) scale(0.5);
+            }
+        }
+
+        @include alien_head;
+        @include alien_body;
+
+        .alien-body {
+            .arm1 {
+                @include alien_body-arm(35deg, -60deg);
+                left: -20px;
+                &::before{
+                    left: -55px;
+                }
+            }
+
+            .arm2 {
+                @include alien_body-arm(-35deg, 60deg);
+                right: -20px;
+                &::before{
+                    right: -55px;
+                }
+            }
+
+            .hand1 {
+                @include alien_body-hand(-25px, -102px, -30px);
+            }
+
+            .hand2 {
+                @include alien_body-hand(-25px, 232px, -27px);
+            }
+            .leg1{
+                @include alien_body-leg(20deg,11px,-15deg,-8px);
+                left: -20px;
+            }
+            .leg2{
+                @include alien_body-leg(-20deg,-11px,15deg,-20px);
+                right: -20px;
+            }
+        }
+    }
+}

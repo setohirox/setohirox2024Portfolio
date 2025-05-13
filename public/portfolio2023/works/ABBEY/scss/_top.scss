@@ -1,0 +1,76 @@
+.topfade {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@mixin headerimage {
+    .headerimg {
+        img{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            user-select: none;
+            filter: blur(2px) grayscale(100%);
+        }
+    }
+}
+
+@mixin toptitle($toptitlefont1,$toptitlefont2,$toptitlefont3,$toptitlewidth,$toptitleY){
+    .top-title{
+        width: $toptitlewidth;
+        text-align: center;
+        position: absolute;
+        top:$toptitleY;
+        left:50%;
+        transform: translateX(-50%);
+        p{
+            br{
+                display: none;
+            }
+            color: #fff;
+            &:nth-child(1){
+                font-size: $toptitlefont1;
+                letter-spacing: 0.2em;
+            }
+            &:nth-child(2){
+                font-size: $toptitlefont2;
+            }
+            &:nth-child(3){
+                font-size: $toptitlefont3;
+            }
+        }
+    }
+}
+
+#top {
+    @include res(xl) {
+        @include headerimage;
+        @include toptitle(3rem, 1.1rem, 1.05rem, 100%, 61%);
+    }
+
+    @include res(lg) {
+        @include headerimage;
+        @include toptitle(2.3rem, 1rem, 0.95rem , 100%, 59%);
+    }
+
+    @include res(md) {
+        @include headerimage;
+        @include toptitle(1.8rem, 0.85rem, 0.8rem, 90%, 58%);
+    }
+
+    @include res(sm) {
+        @include headerimage;
+        @include toptitle(1.6rem, 0.6rem, 0.55rem, 80%, 57%);
+    }
+    @include res(xs) {
+        @include headerimage;
+        @include toptitle(1.1rem, 0.7rem, 0.75rem, 75%, 56%);
+        .top-title{
+            p{
+                br{
+                    display: block;
+                }
+            }
+        }
+    }
+}

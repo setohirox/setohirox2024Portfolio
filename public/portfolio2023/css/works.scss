@@ -1,0 +1,282 @@
+$medium: 1079px;
+$mobile: 768px;
+
+@mixin medium {
+    @media screen and (max-width: $medium) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+.fadeIn_left {
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: 1s;
+}
+
+.fadeIn_left.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fadeIn_right {
+    opacity: 0;
+    transform: translate(50%, 0);
+    transition: 1s;
+}
+
+.fadeIn_right.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fadeIn_up {
+    opacity: 0;
+    transform: translate(0, 50%);
+    transition: 1s;
+}
+
+.fadeIn_up.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fadeIn {
+    opacity: 0;
+    transition: 2s;
+}
+
+.fadeIn.is-show {
+    opacity: 1;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+
+    .wrapper {
+        padding: 0 100px;
+
+        @include mobile {
+            padding: 0 10px;
+        }
+        .top {
+            width: 90%;
+            height: 100vh;
+            margin: 0 auto;
+            position: relative;
+
+            .top-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                h2 {
+                    font-family: 'Quicksand', sans-serif;
+                    text-align: center;
+                    font-size: 20rem;
+                    color: white;
+                    user-select: none;
+
+                    @include medium {
+                        font-size: 14rem;
+                    }
+
+                    @include mobile {
+                        font-size: 5rem;
+                    }
+                }
+            }
+        }
+
+        .site_work{
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 200px;
+            .site_work-wrapper {
+                width: 100%;
+                max-width: 1080px;
+                margin: 0 auto;
+            }
+        }
+
+        .work {
+            width: 100%;
+            margin: 0 auto;
+            padding-bottom: 200px;
+
+            .work-wrapper {
+                width: 100%;
+                max-width: 1080px;
+                margin: 0 auto;
+                .worklisttitle{
+                    text-align: center;
+                    color: #fff;
+                    font-size: 2.5rem;
+                    padding: 2.5em;
+                    @include mobile{
+                        font-size: 1.8rem;
+                        padding: 1em;
+                    }
+                }
+                .site_worklist{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: -10px;
+                    @include mobile {
+                        display: inline;
+                        margin: 0 auto;
+                    }
+                    .site_workitem {
+                        width: 210px;
+                        height: 210px;
+                        border: solid 2px #fff;
+                        margin: 30px 10px;
+                        position: relative;
+
+                        @include mobile {
+                            margin: 20px auto;
+                        }
+
+                        img {
+                            width: 210px;
+                            height: 210px;
+                            object-fit: cover;
+                            cursor: pointer;
+                            filter: blur(3px) grayscale(30%) opacity(0.4);
+                        }
+                        h3 {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #ffffff;
+                            width: 210px;
+                            text-align: center;
+                            font-size: 1rem;
+                            font-family: 'M PLUS 1', sans-serif;
+                            user-select: none;
+                            z-index: -1;
+                        }
+                    }
+                }
+                .worklist {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: -10px;
+                    @include mobile {
+                        display: inline;
+                        margin: 0 auto;
+                    }
+
+                    .workitem {
+                        width: 210px;
+                        height: 210px;
+                        border: solid 2px #fff;
+                        margin: 30px 10px;
+                        position: relative;
+                        @include mobile {
+                            margin: 20px auto;
+                        }
+
+                        img {
+                            width: 210px;
+                            height: 210px;
+                            object-fit: cover;
+                            cursor: pointer;
+                            filter: blur(3px) grayscale(30%) opacity(0.4);
+                        }
+
+                        .desc {
+                            display: none;
+                        }
+
+                        h3 {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #ffffff;
+                            width: 210px;
+                            text-align: center;
+                            font-size: 1rem;
+                            font-family: 'M PLUS 1', sans-serif;
+                            user-select: none;
+                            z-index: -1;
+                        }
+                    }
+                }
+
+                .lightbox {
+                    overflow-y: scroll;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        user-select: none;
+                    }
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    .desc {
+                        position: absolute;
+                        font-family: 'M PLUS 1', sans-serif;
+                        color: white;
+                        text-align: center;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        span {
+                            font-size: 1.5rem;
+                        }
+
+                        @include mobile {
+                            font-size: 0.7rem;
+
+                            span {
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        .desbr {
+                            display: none;
+
+                            @include mobile {
+                                display: block;
+                            }
+                        }
+
+                        .desbb {
+                            display: block;
+
+                            @include mobile {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

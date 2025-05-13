@@ -1,0 +1,92 @@
+@mixin menutitle($menutitlesize) {
+    position: relative;
+    h2 {
+        position: absolute;
+        top: 5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        color: #434343;
+        font-size: $menutitlesize;
+        letter-spacing: 0.3em;
+    }
+}
+
+@mixin menusize($menusizewidth) {
+    .menu_container {
+        position: relative;
+        width: 90%;
+        height: 1000px;
+        max-width: 1440px;
+        margin: 0 auto;
+        z-index: 100;
+
+        .menu-wrap {
+            width: $menusizewidth;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@mixin menulist($menulistfontsize, $menulistpadding) {
+    .menu_container{
+        .menu-wrap {
+            .menu-list {
+                border-bottom: solid 1px #000;
+    
+                li {
+                    border-top: solid 1px #000;
+    
+                    &:nth-child(1) {
+                        margin: 0;
+                    }
+    
+                    dl {
+                        padding: $menulistpadding;
+                        color: #000;
+                        font-size: $menulistfontsize;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#menu {
+    @include res(xl) {
+        @include menutitle(3rem);
+        @include menusize(70%);
+        @include menulist(1.3rem, 2.3rem 1.4rem);
+    }
+
+    @include res(lg) {
+        @include menutitle(3rem);
+        @include menusize(70%);
+        @include menulist(1.2rem, 2.3rem 1.4rem);
+    }
+
+    @include res(md) {
+        @include menutitle(3rem);
+        @include menusize(86%);
+        @include menulist(1rem, 2rem 1.4rem);
+    }
+
+    @include res(sm) {
+        @include menutitle(3rem);
+        @include menusize(86%);
+        @include menulist(1rem, 1.5rem 1.4rem);
+    }
+
+    @include res(xs) {
+        @include menutitle(3rem);
+        @include menusize(100%);
+        @include menulist(1rem, 1.5rem 1.4rem);
+    }
+}

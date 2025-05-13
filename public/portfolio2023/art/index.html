@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/page.css" type="text/css">
+    <link rel="stylesheet" href="../css/art.css" type="text/css">
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=M+PLUS+1:wght@300&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <title>CSSART</title>
+</head>
+
+<body>
+    <!--ページ切り替え-->
+    <div class="page-fade">
+        <div class="F-Rocket">
+            <div class="F-Rocket-body">
+                <div class="F-Rocket-top"></div>
+                <div class="F-Rocket-window"></div>
+            </div>
+            <div class="F-Rocket-bottom"></div>
+            <div class="F-Rocket-left"></div>
+        </div>
+    </div>
+    <!--ヘッダー-->
+    <header>
+        <div class="header-logo pagebtnT">
+            <img src="../img/icon.png" alt="icon" width="100%">
+            <h1>SETO AKIHIRO</h1>
+        </div>
+        <div class="menubar">
+            <p class="menutext">MENU</p>
+            <div class="menu-btn">
+                <input id="checkbox1" type="checkbox">
+                <label class="menu-trigger" for="checkbox1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </div>
+        <nav class="menu">
+            <div class="menulist">
+                <div class="home pagebtnH">
+                    <p>HOME</p>
+                </div>
+                <div class="about pagebtnA">
+                    <p>ABOUT</p>
+                </div>
+                <div class="works pagebtnW">
+                    <p>WORKS</p>
+                </div>
+                <div class="cssart pagebtnCA">
+                    <p>CSS ART</p>
+                </div>
+                <div class="contact pagebtnC">
+                    <p>CONTACT</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="wrapper">
+            <section class="top">
+                <div class="top-text">
+                    <h2>CSSART</h2>
+                </div>
+            </section>
+            <section class="art">
+                <div class="art-wrapper">
+                    <ul>
+                        <li><iframe class="if-content" src="./tomato/index.html" frameborder="0"></iframe></li>
+                        <li><iframe class="if-content" src="./chrome/index.html" frameborder="0"></iframe></li>
+                        <li><iframe class="if-content" src="./minecraftblock/index.html" frameborder="0"></iframe></li>
+                        <li><iframe class="if-content" src="./house/index.html" frameborder="0"></iframe></li>
+                        <li><iframe class="if-content" src="./mario/index.html" frameborder="0"></iframe></li>
+                        <li><iframe class="if-content" src="./eye/index.html" frameborder="0"></iframe></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="../js/page.js"></script>
+</body>
+
+</html>

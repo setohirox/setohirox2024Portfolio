@@ -1,0 +1,31 @@
+.otoiawase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.otoiawase p {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  font-family: "M PLUS 1", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .otoiawase p {
+    font-size: 1rem;
+  }
+}
+.otoiawase a {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-family: "M PLUS 1", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .otoiawase a {
+    font-size: 1.2rem;
+  }
+}
+.otoiawase .no-spam {
+  display: none;
+}/*# sourceMappingURL=contact.css.map */

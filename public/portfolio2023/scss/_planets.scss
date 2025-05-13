@@ -1,0 +1,220 @@
+@mixin planet_body($planetpositiontop, $planetpositionleft, $planetbackgroundcolor) {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: $planetpositiontop;
+    left: $planetpositionleft;
+    background-color: $planetbackgroundcolor;
+}
+
+@mixin planet1animation {
+    animation: UpDown1 4s infinite ease-in-out alternate;
+
+    @keyframes UpDown1 {
+
+        0% {
+            transform: translateY(0) translateX(0) rotate(-28deg);
+        }
+
+        100% {
+            transform: translateY(25px) translateX(15px) rotate(-28deg);
+        }
+    }
+
+}
+
+@mixin planetbefore($planetbeforebackgroundcolor, $planetbeforeborder) {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 293px;
+        height: 65px;
+        left: -60px;
+        top: 56px;
+        border-radius: 50%;
+        background-color: $planetbeforebackgroundcolor;
+        border: $planetbeforeborder;
+    }
+}
+
+@mixin planetafter($planetafterbackgroundcolor){
+    &::after {
+        content: "";
+        position: absolute;
+        width: 172px;
+        height: 58px;
+        border-radius: 50% 50% 20% 20% / 20% 20% 80% 80%;
+        top: 80px;
+        background-color: $planetafterbackgroundcolor;
+    }
+}
+
+.planet1 {
+    @include res(pc) {
+        @include planet_body(-400px,-650px, #ff74e6);
+        @include planet1animation;
+        @include planetbefore(#adef9b, none);
+        @include planetafter(#ff74e6);
+    }
+
+    @include res(medium) {
+        @include planet_body(-400px,-650px, #ff74e6);
+        @include planet1animation;
+        @include planetbefore(#adef9b, none);
+        @include planetafter(#ff74e6);
+    }
+
+    @include res(mobile) {
+        @include planet_body(-300px,-230px, #ff74e6);
+        @include planetbefore(#adef9b, none);
+        @include planetafter(#ff74e6);
+        animation: UpDown1-small 4s infinite ease-in-out alternate;
+
+        @keyframes UpDown1-small {
+
+            0% {
+                transform: translateY(0) translateX(0) rotate(-28deg) scale(0.3);
+            }
+
+            100% {
+                transform: translateY(25px) translateX(15px) rotate(-28deg) scale(0.3);
+            }
+        }
+    }
+}
+
+.planet1-light {
+    background-color: #b0754d;
+
+    &::before {
+        background-color: #ef9b9b;
+    }
+
+    &::after {
+        background-color: #b0754d;
+    }
+}
+
+@mixin planet2animation {
+    animation: UpDown2 3.5s infinite ease-in-out alternate;
+
+    @keyframes UpDown2 {
+
+        0% {
+            transform: translateY(0) rotate(208deg) scale(0.9);
+        }
+
+        100% {
+            transform: translateY(-25px) rotate(208deg) scale(0.95);
+        }
+    }
+}
+
+.planet2 {
+    @include res(pc) {
+        @include planet_body(190px,-500px, #6a686c);
+        @include planet2animation;
+        @include planetbefore(#68b8f53b, solid 3px white);
+        @include planetafter(#6a686c);
+    }
+
+    @include res(medium) {
+        @include planet_body(190px,-500px, #6a686c);
+        @include planet2animation;
+        @include planetbefore(#68b8f53b, solid 3px white);
+        @include planetafter(#6a686c);
+    }
+
+    @include res(mobile) {
+        @include planet_body(-30px,40px, #6a686c);
+        @include planetbefore(#68b8f53b, solid 3px white);
+        @include planetafter(#6a686c);
+        animation: UpDown2-small 4s infinite ease-in-out alternate;
+
+        @keyframes UpDown2-small {
+
+            0% {
+                transform: translateY(0) rotate(208deg) scale(0.3);
+            }
+
+            100% {
+                transform: translateY(-25px) rotate(208deg) scale(0.35);
+            }
+        }
+    }
+}
+
+.planet2-light {
+    background-color: #5ab244;
+
+    &::before {
+        background-color: #ef9b9ba4;
+        border: solid 3px rgb(206, 206, 206);
+    }
+
+    &::after {
+        background-color: #5ab244;
+    }
+}
+
+@mixin planet3animation {
+    animation: UpDown3 3s infinite ease-in-out alternate;
+
+    @keyframes UpDown3 {
+
+        0% {
+            transform: translateY(0) rotate(170deg) scale(0.8);
+        }
+
+        100% {
+            transform: translateY(-25px) rotate(180deg) scale(0.8);
+        }
+    }
+}
+
+.planet3 {
+    @include res(pc) {
+        @include planet_body(-335px,500px, #8080c2);
+        @include planet3animation;
+        @include planetbefore(#ecc743, none);
+        @include planetafter(#8080c2);
+    }
+
+    @include res(medium) {
+        @include planet_body(-335px,500px, #8080c2);
+        @include planet3animation;
+        @include planetbefore(#ecc743, none);
+        @include planetafter(#8080c2);
+    }
+
+    @include res(mobile) {
+        @include planet_body(130px, -170px, #8080c2);
+        @include planetbefore(#ecc743, none);
+        @include planetafter(#8080c2);
+        animation: UpDown3-small 4s infinite ease-in-out alternate;
+
+        @keyframes UpDown3-small {
+
+            0% {
+                transform: translateY(0) rotate(170deg) scale(0.3);
+            }
+
+            100% {
+                transform: translateY(-25px) rotate(180deg) scale(0.3);
+            }
+        }
+    }
+}
+.planet3-light {
+    background-color: #2f5be1;
+
+    &::before {
+        background-color: #5ab244;
+    }
+
+    &::after {
+        background-color: #2f5be1;
+    }
+}

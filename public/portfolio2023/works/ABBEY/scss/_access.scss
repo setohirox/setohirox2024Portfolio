@@ -1,0 +1,271 @@
+@mixin accesstitle($accesstitlesize) {
+    h2 {
+        text-align: center;
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+        z-index: 100;
+        color: #fff;
+        font-size: $accesstitlesize;
+        letter-spacing: 0.3em;
+    }
+}
+
+@mixin accesssize {
+    position: relative;
+    height: 1500px;
+    z-index: 100;
+    background: #000;
+    overflow: hidden;
+
+    .access_wrap {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        .access_wrap-map {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+
+            iframe {
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                -o-filter: grayscale(100%);
+                filter: grayscale(100%);
+                width: 100%;
+                height: 250px;
+                vertical-align: bottom;
+            }
+        }
+
+        .access_wrap-info {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@mixin accessdaytime($openclosefontsize, $acdaytimefontsize) {
+    .access_wrap {
+        .access_wrap-info {
+            .ac_info-daytime {
+                width: 50%;
+                margin: 0 auto;
+
+                ul {
+                    text-align: center;
+
+                    li {
+                        color: #fff;
+
+                        &:nth-child(1) {
+                            font-size: $openclosefontsize;
+                        }
+
+                        dl {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0.8rem 0;
+                            font-size: $acdaytimefontsize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin accessdetail($acdetailfont1, $acdetailfont2, $acdetailfont3456,$acdetailfontspan) {
+    .access_wrap {
+        .access_wrap-info {
+            .ac_info-detail {
+                width: 75%;
+                margin: 0 auto;
+
+                p {
+                    color: #fff;
+                    padding: 0.6rem 0;
+
+                    &:nth-child(1) {
+                        text-align: center;
+                        font-size: $acdetailfont1;
+                    }
+
+                    &:nth-child(2) {
+                        width: 70%;
+                        margin: 0 auto;
+                        padding-bottom: 4rem;
+                        font-size: $acdetailfont2;
+                    }
+
+                    &:nth-child(3) {
+                        width: 70%;
+                        margin: 0 auto;
+                        font-size: $acdetailfont3456;
+                    }
+
+                    &:nth-child(4) {
+                        width: 70%;
+                        margin: 0 auto;
+                        font-size: $acdetailfont3456;
+                    }
+
+                    &:nth-child(5) {
+                        width: 70%;
+                        margin: 0 auto;
+                        font-size: $acdetailfont3456;
+                    }
+
+                    &:nth-child(6) {
+                        width: 70%;
+                        margin: 0 auto;
+                        font-size: $acdetailfont3456;
+                        span{
+                            font-size: $acdetailfontspan;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+$bgitemcolor: #2d2d2d;
+
+@mixin scissors_circle($scircletop, $scircleleft) {
+    content: "";
+    position: absolute;
+    top: $scircletop;
+    left: $scircleleft;
+    width: 135px;
+    height: 135px;
+    z-index: 1;
+    background:
+        radial-gradient(circle at 50% 50%, #00000000 35%, $bgitemcolor 36%, $bgitemcolor 55%, #00000000 56%);
+}
+
+@mixin scissors($scissorssize, $scissorsrotate) {
+    .scissors {
+        z-index: -1;
+        position: absolute;
+        top: 250px;
+        left: 10%;
+        width: 350px;
+        height: 550px;
+        background-repeat: no-repeat;
+        background-position: center;
+        object-fit: cover;
+        transform: scale($scissorssize) rotate($scissorsrotate);
+
+        &::before {
+            @include scissors_circle(417px, 27px);
+        }
+
+        &::after {
+            @include scissors_circle(414px, 179px);
+        }
+
+        .scissors_1 {
+            position: absolute;
+            background: $bgitemcolor;
+            width: 100px;
+            height: 500px;
+            clip-path: polygon(60% 0, 100% 0, 100% 90%, 60% 90%);
+            border-radius: 50%;
+            left: 95px;
+            transform: rotate(18deg);
+        }
+
+        .scissors_2 {
+            position: absolute;
+            background: $bgitemcolor;
+            width: 100px;
+            height: 500px;
+            clip-path: polygon(40% 0, 0 0, 0 90%, 40% 90%);
+            border-radius: 50%;
+            left: 136px;
+            transform: rotate(-19deg);
+
+            &::before {
+                position: absolute;
+                content: "";
+                background: $bgitemcolor;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                top: 255px;
+                left: 7px;
+                border: solid 4px #000;
+            }
+        }
+    }
+}
+
+@mixin comb($combsize, $combrotate) {
+    .comb {
+        z-index: -2;
+        position: absolute;
+        top: 450px;
+        right: 0;
+        width: 500px;
+        height: 100px;
+        border-radius: 50% 50% 10% 10% / 30% 30% 45% 45%;
+        background:
+            $bgitemcolor repeating-linear-gradient(90deg, $bgitemcolor 0.71%, rgb(0 0 0 / 1) 0.74%, rgb(0 0 0 / 1) 2.15%, $bgitemcolor 2.17%, $bgitemcolor 2.86%) 25px 40px / 450px 75px no-repeat no-repeat;
+        transform: scale($combsize) rotate($combrotate);
+
+    }
+}
+
+
+
+#access {
+    @include res(xl) {
+        @include scissors(2.5, 25deg);
+        @include comb(2.5, 55deg);
+        @include accesssize;
+        @include accessdaytime(1.8rem, 1.5rem);
+        @include accessdetail(1.25rem, 1rem, 1.2rem, 1rem);
+        @include accesstitle(3rem);
+    }
+
+    @include res(lg) {
+        @include scissors(2.3, 15deg);
+        @include comb(2.3, 75deg);
+        @include accesssize;
+        @include accessdaytime(1.8rem, 1.5rem);
+        @include accessdetail(1.23rem, 0.8rem, 1rem, 0.83rem);
+        @include accesstitle(3rem);
+    }
+
+    @include res(md) {
+        @include scissors(1.8, 25deg);
+        @include comb(1.8, 55deg);
+        @include accesssize;
+        @include accessdaytime(1.8rem, 1.5rem);
+        @include accessdetail(1.22rem, 0.7rem, 0.9rem, 0.8rem);
+        @include accesstitle(3rem);
+    }
+
+    @include res(sm) {
+        @include scissors(1.5, 25deg);
+        @include comb(1.5, 55deg);
+        @include accesssize;
+        @include accessdaytime(1.8rem, 1.5rem);
+        @include accessdetail(1.2rem, 0.6rem, 0.8rem, 0.5rem);
+        @include accesstitle(3rem);
+    }
+
+    @include res(xs) {
+        @include scissors(1.5, 30deg);
+        @include comb(1.5, 30deg);
+        @include accesssize;
+        @include accessdaytime(1.3rem, 1rem);
+        @include accessdetail(0.95rem, 0.5rem, 0.7rem, 0.5rem);
+        @include accesstitle(3rem);
+    }
+}

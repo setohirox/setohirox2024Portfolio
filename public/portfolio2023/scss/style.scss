@@ -1,0 +1,429 @@
+@import './_breakpoints.scss';
+@import './_toppage.scss';
+@import './_loader.scss';
+@import './_Rocket.scss';
+@import './_planets.scss';
+@import './_ufo.scss';
+@import './_alien.scss';
+@import './_satellite.scss';
+@import './_astronaut.scss';
+
+
+$dark-theme: rgb(64, 55, 91);
+$light-theme: #f7e3a1;
+$light-theme-text: rgb(64, 64, 64);
+
+
+html,
+body {
+    overflow: hidden;
+}
+
+body {
+    background: $dark-theme;
+    margin: 0;
+}
+
+.light-theme {
+    background: $light-theme;
+}
+
+.background-item {
+    position: absolute;
+}
+
+#mouse-stalker {
+    pointer-events: none;
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    transform: translate(0, 0);
+    transition: transform 0.2s;
+    transition-timing-function: ease-out;
+    z-index: 999;
+
+    @include res(mobile) {
+        display: none;
+    }
+
+    @include res(medium) {
+        display: none;
+    }
+}
+
+.menu-container {
+    .menu {
+        display: flex;
+        gap: 50px;
+
+        @include res(medium) {
+            width: 100%;
+            display: block;
+        }
+
+        @include res(mobile) {
+            width: 100%;
+            display: block;
+            z-index: 999;
+        }
+
+        div {
+            --speed: 14;
+            --count: 4;
+            --delay: calc(sin((var(--index) / var(--count)) * 65deg) * var(--speed) * -1s);
+            border-radius: 50%;
+            animation: jump calc(var(--speed) * 1s) var(--delay) infinite ease-in-out;
+
+            &:nth-of-type(2) {
+                color: white;
+            }
+
+            &:nth-of-type(4) {
+                color: white;
+            }
+
+            &:nth-of-type(5) {
+                color: white;
+            }
+        }
+
+        @keyframes jump {
+            50% {
+                translate: 0 -100%;
+            }
+        }
+
+        @mixin menutag {
+            margin-top: 140px;
+            text-align: center;
+            font-size: 60px;
+            user-select: none;
+            z-index: 1000;
+            font-family: 'Dosis', sans-serif;
+            color: white;
+            cursor: pointer;
+
+            @include res(mobile) {
+                margin-top: 60px;
+                font-size: 2.5em;
+            }
+        }
+
+        .about {
+            @include menutag;
+
+            @include res(medium) {
+                position: absolute;
+                left: 20%;
+                bottom: 59%;
+            }
+
+            @include res(mobile) {
+                left: 14%;
+                bottom: 45%;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background:
+                    radial-gradient(circle at 20% 65%, rgb(208, 208, 208) 6%, #fff0 0),
+                    radial-gradient(circle at 40% 32%, rgb(208, 208, 208) 12%, #fff0 0),
+                    radial-gradient(circle at 80% 74%, rgb(208, 208, 208) 12%, #fff0 0),
+                    rgb(166, 166, 166);
+                border-radius: 50%;
+                left: 108px;
+                top: -30px;
+                animation: satellite 5s infinite linear;
+                z-index: 1;
+
+                @keyframes satellite {
+                    49% {
+                        z-index: 1;
+                    }
+
+                    50% {
+                        z-index: -1;
+                        transform: translateX(-50px) translateY(110px);
+                    }
+
+                    100% {
+                        z-index: -1;
+                    }
+                }
+
+                @include res(mobile) {
+                    width: 10px;
+                    height: 10px;
+                    left: 70px;
+                }
+
+                ;
+            }
+        }
+
+        .light-theme-menu-text-about {
+            color: $light-theme-text;
+
+            &::before {
+                background:
+                    radial-gradient(circle at 20% 65%, rgb(85, 85, 85) 6%, #fff0 0),
+                    radial-gradient(circle at 40% 32%, rgb(85, 85, 85) 12%, #fff0 0),
+                    radial-gradient(circle at 80% 74%, rgb(85, 85, 85) 12%, #fff0 0),
+                    rgb(59, 129, 173);
+            }
+        }
+
+        .works {
+            @include menutag;
+            margin-left: 35px;
+
+            @include res(medium) {
+                position: absolute;
+                top: 59%;
+                left: 20%;
+                margin-left: 0px;
+            }
+
+            @include res(mobile) {
+                top: 63%;
+                left: 14%;
+                margin-left: 0px;
+            }
+        }
+
+        .cssart {
+            @include menutag;
+
+            @include res(medium) {
+                position: absolute;
+                bottom: 59%;
+                right: 20%;
+            }
+
+            @include res(mobile) {
+                right: 14%;
+                bottom: 45%;
+            }
+        }
+
+        .contact {
+            @include menutag;
+
+            @include res(medium) {
+                position: absolute;
+                top: 59%;
+                right: 20%;
+            }
+
+            @include res(mobile) {
+                top: 63%;
+                right: 14%;
+            }
+        }
+
+        .icon {
+            margin-left: 45px;
+            position: relative;
+            width: 280px;
+            height: 280px;
+            background-color: #1e1f31;
+            user-select: none;
+
+            @include res(medium) {
+                margin-left: 0px;
+            }
+
+            @include res(mobile) {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                top: 23%;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-left: 0px;
+            }
+
+            .icon-img {
+                width: 370px;
+                height: 370px;
+                background-image: url(../img/icon.png);
+                background-repeat: no-repeat;
+                background-size: 280px;
+
+                @include res(mobile) {
+                    margin: 0;
+                    width: 150px;
+                    height: 150px;
+                    background-size: 100px;
+                }
+            }
+
+            .icon-img-light {
+                background-image: url(../img/icon2.png);
+            }
+
+            .theme-btn {
+                cursor: pointer;
+                width: 64px;
+                height: 64px;
+                background-color: #f5f5f5;
+                position: absolute;
+                top: 208px;
+                left: 208px;
+                border-radius: 50%;
+                box-shadow:
+                    0 0 0 0.3em rgba(254, 243, 229, 0.3),
+                    0 0 0 0.6em rgba(255, 242, 229, 0.15),
+                    0 0 0 0.9em rgba(244, 241, 232, 0.1);
+
+                @include res(mobile) {
+                    width: 30px;
+                    height: 30px;
+                    top: -5%;
+                    left: -25%;
+                    box-shadow:
+                        0 0 0 0.2em rgba(254, 243, 229, 0.3),
+                        0 0 0 0.5em rgba(255, 242, 229, 0.15),
+                        0 0 0 0.8em rgba(244, 241, 232, 0.1);
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    background:
+                        radial-gradient(circle at 70% 37%, #f5f5f5 45%, #fff0 48%),
+                        radial-gradient(circle at 50% 50%, rgb(63, 83, 125) 80%, #fff0 0);
+                    top: 8px;
+                    left: 8px;
+
+                    @include res(mobile) {
+                        width: 23px;
+                        height: 23px;
+                        top: 3.3px;
+                        left: 4px;
+                    }
+                }
+
+                &:active {
+                    transform: translate(2px, 2px);
+                }
+            }
+
+            .light-theme-btn {
+                background-color: rgb(234, 141, 55);
+                box-shadow:
+                    0 0 0 0.3em rgba(255, 179, 86, 0.3),
+                    0 0 0 0.6em rgba(240, 132, 23, 0.15),
+                    0 0 0 0.9em rgba(223, 184, 43, 0.1);
+
+                &::before {
+                    background:
+                        radial-gradient(circle at 70% 37%, rgb(234, 141, 55) 45%, #fff0 48%),
+                        radial-gradient(circle at 50% 50%, #f5f5f5 80%, #fff0 0);
+                }
+            }
+        }
+
+        .icon-light {
+            background-color: #b2a369;
+        }
+
+        .light-theme-menu-text {
+            p {
+                color: $light-theme-text;
+            }
+        }
+    }
+}
+
+.name {
+    position: absolute;
+
+    @include res(mobile) {
+        top: 10%;
+    }
+
+    .name-wrapper {
+        position: absolute;
+        top: -350px;
+        transform: scale(0.85);
+        z-index: 999;
+
+        @include res(medium) {
+            transform: scale(0.7);
+            top: -370px;
+        }
+
+        @include res(mobile) {
+            top: 0;
+            left: 50%;
+            transform: scale(0.3);
+        }
+
+        .name-flag {
+            position: absolute;
+            width: 914px;
+            height: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            user-select: none;
+
+            h1 {
+                font-size: 160px;
+                font-family: 'Dosis', sans-serif;
+                text-shadow: rgb(255, 255, 255) 0px 1px 5px;
+
+                animation: name-animation 3s infinite linear alternate;
+
+                @keyframes name-animation {
+                    0% {
+                        color: rgb(255, 255, 255);
+                    }
+
+                    70% {
+                        color: rgb(255, 255, 255);
+                    }
+
+                    80% {
+                        color: $dark-theme;
+                    }
+
+                    100% {
+                        color: $dark-theme;
+                    }
+                }
+            }
+        }
+
+        .nameflag-light {
+            h1 {
+                text-shadow: $light-theme-text 0px 1px 5px;
+                animation: light-name-animation 3s infinite linear alternate;
+
+                @keyframes light-name-animation {
+                    0% {
+                        color: $light-theme-text
+                    }
+
+                    70% {
+                        color: $light-theme-text;
+                    }
+
+                    80% {
+                        color: $light-theme;
+                    }
+
+                    100% {
+                        color: $light-theme;
+                    }
+                }
+            }
+        }
+    }
+}

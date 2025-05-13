@@ -1,0 +1,105 @@
+@mixin faqsize($faqtitlesize){
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #fff;
+    .faq-wrap{
+        width: 70%;
+        margin: 0 auto;
+        h1{
+            padding-top: 8.5rem;
+            text-align: center;
+            font-size: $faqtitlesize;
+        }
+    }
+}
+
+@mixin faqlist($faqddfont,$faqiconscale){
+    .faq-list {
+        width: 100%;
+        margin-bottom: 20em;
+        li {
+            margin: 5em 0;
+
+            dl {
+                line-height: 4em;
+
+                dt {
+                    border-bottom: solid 1px #808080;
+                    position: relative;
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                    padding-bottom:1rem;
+                    margin-bottom: 20px;
+                    font-weight: bold;
+
+
+                    &::before {
+                        position: absolute;
+                        right: 100%;
+                        top: 50%;
+                        content: "Q";
+                        width: 36px;
+                        height: 36px;
+                        color: #000;
+                        border-radius: 50%;
+                        border: 2px solid #000;
+                        text-align: center;
+                        line-height: 36px;
+                        transform: translateY(-50%) scale($faqiconscale);
+                        margin-right: 10px;
+                    }
+                }
+
+                dd {
+                    position: relative;
+                    font-size: $faqddfont;
+                    line-height: 30px;
+
+                    &::before {
+                        position: absolute;
+                        content: "A";
+                        right: 100%;
+                        top: 50%;
+                        width: 40px;
+                        height: 40px;
+                        color: #fff;
+                        border-radius: 50%;
+                        background: #000;
+                        text-align: center;
+                        line-height: 40px;
+                        transform: translateY(-50%) scale($faqiconscale);
+                        margin-right: 10px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+#faq{
+    @include res(xl) {
+        @include faqsize(3rem);
+        @include faqlist(1.2rem,1);
+    }
+
+    @include res(lg) {
+        @include faqsize(3rem);
+        @include faqlist(1.2rem,1);
+    }
+
+    @include res(md) {
+        @include faqsize(3rem);
+        @include faqlist(1.02rem,0.9);
+    }
+
+    @include res(sm) {
+        @include faqsize(2rem);
+        @include faqlist(0.95rem,0.8);
+    }
+    @include res(xs) {
+        @include faqsize(2rem);
+        @include faqlist(0.95rem,0.8);
+    }
+}

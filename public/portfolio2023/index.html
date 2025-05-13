@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SetoAkihiro's Portfoliosite">
+    <title>Seto Akihiro Portfolio</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <script>
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <!--ローディングアニメーション-->
+    <div id="loading" class="loader">
+        <p class="loadingtxt">Welcome</p>
+        <div class="L-Rocket Rocket">
+            <div class="Rocket-body">
+                <div class="Rocket-top"></div>
+                <div class="Rocket-window"></div>
+            </div>
+            <div class="Rocket-bottom"></div>
+            <div class="Rocket-left"></div>
+        </div>
+    </div>
+    <!--ページ切り替え フェードアウト-->
+    <div class="page-fade">
+        <div class="F-Rocket Rocket">
+            <div class="Rocket-body">
+                <div class="Rocket-top"></div>
+                <div class="Rocket-window"></div>
+            </div>
+            <div class="Rocket-bottom"></div>
+            <div class="Rocket-left"></div>
+        </div>
+    </div>
+    <!--マウスストーカー-->
+    <div id="mouse-stalker">
+        <div class="astronaut">
+            <div class="astronaut-head">
+                <div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="astronaut-body">
+                <div class="left-arm"></div>
+                <div class="left-hand"></div>
+                <div class="right-arm"></div>
+                <div class="right-hand"></div>
+                <div class="left-leg"></div>
+                <div class="right-leg"></div>
+                <div class="body-middle"></div>
+                <div class="body-back"></div>
+            </div>
+        </div>
+    </div>
+    <!--全体-->
+    <div class="container">
+        <div class="wrapper">
+            <div class="background-item">
+                <!--惑星1-->
+                <div class="planet1"></div>
+                <!--惑星2-->
+                <div class="planet2"></div>
+                <!--惑星3-->
+                <div class="planet3"></div>
+                <!--UFO-->
+                <div class="ufo-wrapper">
+                    <div class="ufo">
+                        <div class="ufo-top"></div>
+                        <div class="ufo-body"></div>
+                        <div class="ufo-bottom"></div>
+                    </div>
+                </div>
+                <!--人工衛星-->
+                <div class="satellite">
+                    <div class="satellite-top">
+                        <div class="parabolic"></div>
+                        <div class="antenna"></div>
+                        <div class="antenna2"></div>
+                    </div>
+                    <div class="satellite-body"></div>
+                    <div class="satellite-right"></div>
+                    <div class="satellite-left"></div>
+                    <div class="satellite-bottom"></div>
+                </div>
+                <!--エイリアン-->
+                <div class="alien">
+                    <div class="alien-head"></div>
+                    <div class="eye1">
+                        <div class="eye-in">
+                            <div class="eye-ball"></div>
+                        </div>
+                    </div>
+                    <div class="eye2">
+                        <div class="eye-in">
+                            <div class="eye-ball"></div>
+                        </div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="mouth"></div>
+                    <div class="neck"></div>
+                    <div class="alien-body">
+                        <div class="arm1"></div>
+                        <div class="arm2"></div>
+                        <div class="hand1">
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="hand2">
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="leg1"></div>
+                        <div class="leg2"></div>
+                    </div>
+                </div>
+            </div>
+            <!--タイトル(名前)-->
+            <div class="name">
+                <div class="name-wrapper">
+                    <div class="name-flag">
+                        <h1>SETO AKIHIRO</h1>
+                    </div>
+                    <div class="astronaut N-astronaut">
+                        <div class="astronaut-head">
+                            <div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="astronaut-body N-astronaut-body">
+                            <div class="left-arm N-left-arm">
+                                <div class="N-left-hand"></div>
+                                <div class="flag"></div>
+                            </div>
+                            <div class="right-arm"></div>
+                            <div class="right-hand"></div>
+                            <div class="left-leg N-left-leg"></div>
+                            <div class="right-leg N-right-leg"></div>
+                            <div class="body-middle"></div>
+                            <div class="body-back"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--ロケット-->
+            <div class="Rocket-rotate">
+                <div class="M-Rocket">
+                    <div class="Rocket-body">
+                        <div class="Rocket-top"></div>
+                        <div class="Rocket-window"></div>
+                    </div>
+                    <div class="Rocket-bottom"></div>
+                    <div class="Rocket-left"></div>
+                </div>
+            </div>
+            <!--メニュー-->
+            <div class="menu-container">
+                <div class="menu">
+                    <div class="about pagebtnA" style="--index: 1;">
+                        <p>ABOUT</p>
+                    </div>
+                    <div class="works pagebtnW" style="--index: 2;">
+                        <p>WORKS</p>
+                    </div>
+                    <div class="icon">
+                        <div class="icon-img"></div>
+                        <button class="theme-btn" aria-label="theme-color-change"></button>
+                    </div>
+                    <div class="cssart pagebtnCA" style="--index: 3;">
+                        <p>CSS ART</p>
+                    </div>
+                    <div class="contact pagebtnC" style="--index: 4;">
+                        <p>CONTACT</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

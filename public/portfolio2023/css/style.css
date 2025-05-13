@@ -1,0 +1,4575 @@
+/*
+    @include res(pc) {
+    }
+
+    @include res(medium) {
+    }
+
+    @include res(mobile) {
+    }
+*/
+@media (min-width: 1600px) {
+  .container {
+    background-image: radial-gradient(50px 50px, rgba(223, 164, 164, 0.587) 20%, transparent 21.5%), radial-gradient(25px 25px, rgb(151, 165, 94) 20%, transparent 21.5%), radial-gradient(30px 30px, rgba(84, 70, 146, 0.579) 20%, transparent 21.5%), radial-gradient(40px 40px, rgba(207, 37, 37, 0.689) 20%, transparent 21.5%), radial-gradient(34px 34px, rgba(86, 223, 58, 0.511) 20%, transparent 21.5%), radial-gradient(35px 35px, rgba(163, 57, 184, 0.552) 20%, transparent 21.5%), radial-gradient(45px 45px, rgba(255, 255, 255, 0.727) 20%, transparent 21.5%), radial-gradient(25px 25px, rgba(209, 184, 41, 0.552) 20%, transparent 21.5%), radial-gradient(20px 20px, rgba(57, 198, 186, 0.734) 20%, transparent 21.5%);
+    background-size: 600px 1300px, 1200px 500px, 1100px 900px, 700px 2000px, 500px 500px, 700px 1200px, 600px 500px, 1200px 500px, 1050px 1000px;
+    background-position: 100px 0px, 50px 100px, 20px 700px, 70px 20px, 200px 60px, 50px 700px, -200px 700px, -350px -150px, 60px 20px;
+  }
+}
+@media (max-width: 1599px) {
+  .container {
+    background-image: radial-gradient(50px 50px, rgba(223, 164, 164, 0.587) 20%, transparent 21.5%), radial-gradient(25px 25px, rgb(151, 165, 94) 20%, transparent 21.5%), radial-gradient(30px 30px, rgba(84, 70, 146, 0.579) 20%, transparent 21.5%), radial-gradient(40px 40px, rgba(207, 37, 37, 0.689) 20%, transparent 21.5%), radial-gradient(34px 34px, rgba(86, 223, 58, 0.511) 20%, transparent 21.5%), radial-gradient(35px 35px, rgba(163, 57, 184, 0.552) 20%, transparent 21.5%), radial-gradient(45px 45px, rgba(255, 255, 255, 0.727) 20%, transparent 21.5%), radial-gradient(25px 25px, rgba(209, 184, 41, 0.552) 20%, transparent 21.5%), radial-gradient(20px 20px, rgba(57, 198, 186, 0.734) 20%, transparent 21.5%);
+    background-size: 600px 1300px, 1200px 500px, 1100px 900px, 700px 2000px, 500px 500px, 700px 1200px, 600px 500px, 1200px 500px, 1050px 1000px;
+    background-position: 100px 0px, 50px 100px, 20px 700px, 70px 20px, 200px 60px, 50px 700px, -200px 700px, -350px -150px, 60px 20px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    background-image: radial-gradient(25px 25px, rgba(223, 164, 164, 0.587) 20%, transparent 21.5%), radial-gradient(12.5px 12.5px, rgb(151, 165, 94) 20%, transparent 21.5%), radial-gradient(15px 15px, rgba(84, 70, 146, 0.579) 20%, transparent 21.5%), radial-gradient(20px 20px, rgba(207, 37, 37, 0.689) 20%, transparent 21.5%), radial-gradient(17px 17px, rgba(86, 223, 58, 0.511) 20%, transparent 21.5%), radial-gradient(17.5px 17.5px, rgba(163, 57, 184, 0.552) 20%, transparent 21.5%), radial-gradient(22.5px 22.5px, rgba(255, 255, 255, 0.727) 20%, transparent 21.5%), radial-gradient(12.5px 12.5px, rgba(209, 184, 41, 0.552) 20%, transparent 21.5%), radial-gradient(10px 10px, rgba(57, 198, 186, 0.734) 20%, transparent 21.5%);
+    background-size: 300px 650px, 600px 250px, 550px 450px, 350px 1000px, 250px 250px, 350px 600px, 300px 250px, 600px 250px, 525px 500px;
+    background-position: 50px 0px, 25px 50px, 10px 350px, 35px 10px, -60px 30px, -25px 350px, -100px 350px, -125px -75px, 30px 10px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    width: 1600px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+@media (max-width: 1599px) {
+  .wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    transform: scale(0.85);
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.loader {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(47, 101, 190) 0%, rgb(86, 157, 225) 50%, rgb(208, 228, 243) 100%);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  animation: loadingdis 3s linear forwards;
+}
+@keyframes loadingdis {
+  0% {
+    border-radius: 0;
+  }
+  90% {
+    border-radius: 0;
+  }
+  100% {
+    border-radius: 0 0 50% 50%;
+  }
+}
+.loader .loadingtxt {
+  position: absolute;
+  top: 53%;
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  animation: loadingtxtani 3s linear forwards;
+}
+@media (max-width: 768px) {
+  .loader .loadingtxt {
+    font-size: 60px;
+  }
+}
+@keyframes loadingtxtani {
+  0% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  44% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.L-Rocket {
+  position: absolute;
+  top: 40%;
+  animation: L-Rocket-move 4.1s linear forwards;
+}
+@keyframes L-Rocket-move {
+  0% {
+    transform: translate(0px) scale(2);
+  }
+  65% {
+    transform: translateY(30px) scale(2);
+  }
+  100% {
+    transform: translateY(-3000px) scale(2);
+  }
+}
+@media (max-width: 768px) {
+  @keyframes L-Rocket-move {
+    0% {
+      transform: translate(0px) scale(1.5);
+    }
+    65% {
+      transform: translateY(30px) scale(1.5);
+    }
+    100% {
+      transform: translateY(-3000px) scale(1.5);
+    }
+  }
+}
+
+.page-fade {
+  display: none;
+}
+
+.page-fadeout {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  animation: fadeout 4.1s linear forwards;
+  z-index: 99999;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+    background: rgb(64, 55, 91);
+  }
+  100% {
+    opacity: 1;
+    background: rgb(64, 55, 91);
+  }
+}
+.page-fadeout .F-Rocket {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  animation: F-Rocket-move 4.1s linear forwards;
+}
+@keyframes F-Rocket-move {
+  0% {
+    transform: translateY(0px) translateX(-50%) scale(2);
+    opacity: 0;
+  }
+  15% {
+    transform: translateY(0px) translateX(-50%) scale(2);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(30px) translateX(-50%) scale(2);
+  }
+  100% {
+    transform: translateY(-3000px) translateX(-50%) scale(2);
+  }
+}
+@media (max-width: 768px) {
+  @keyframes F-Rocket-move {
+    0% {
+      transform: translateY(0px) translateX(-50%) scale(1.5);
+      opacity: 0;
+    }
+    15% {
+      transform: translateY(0px) translateX(-50%) scale(1.5);
+      opacity: 1;
+    }
+    75% {
+      transform: translateY(30px) translateX(-50%) scale(1.5);
+    }
+    100% {
+      transform: translateY(-3000px) translateX(-50%) scale(1.5);
+    }
+  }
+}
+
+.Rocket-rotate {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  animation: Rocket-spin 10s infinite linear;
+}
+@keyframes Rocket-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .Rocket-rotate {
+    width: 170px;
+    height: 170px;
+    top: 23%;
+    margin: -35px;
+  }
+}
+.Rocket-rotate .M-Rocket {
+  position: absolute;
+  top: 170px;
+  left: -23px;
+}
+@media (max-width: 768px) {
+  .Rocket-rotate .M-Rocket {
+    left: -14%;
+    top: 35%;
+    transform: scale(0.45);
+  }
+}
+
+.M-Rocket .Rocket-body,
+.F-Rocket .Rocket-body,
+.L-Rocket .Rocket-body {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(234, 233, 233);
+  border-radius: 100% 0 100% 0;
+  transform: rotate(-45deg);
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 80%);
+}
+.M-Rocket .Rocket-body .Rocket-top,
+.F-Rocket .Rocket-body .Rocket-top,
+.L-Rocket .Rocket-body .Rocket-top {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ef4848;
+  right: -34%;
+  top: -34%;
+  transform: rotate(45deg);
+}
+.M-Rocket .Rocket-body .Rocket-window,
+.F-Rocket .Rocket-body .Rocket-window,
+.L-Rocket .Rocket-body .Rocket-window {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(180deg, rgb(97, 217, 255) 0%, rgb(255, 255, 255) 100%);
+  border: solid 0.5px gray;
+  border-radius: 50%;
+  right: 10px;
+  top: 10px;
+}
+.M-Rocket .Rocket-bottom,
+.F-Rocket .Rocket-bottom,
+.L-Rocket .Rocket-bottom {
+  position: absolute;
+  width: 20px;
+  height: 6px;
+  background-color: gray;
+  left: 15px;
+  top: 53px;
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+.M-Rocket::before,
+.F-Rocket::before,
+.L-Rocket::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 15px;
+  background-color: #ef4848;
+  top: 33px;
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+.M-Rocket::after,
+.F-Rocket::after,
+.L-Rocket::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: linear-gradient(#00d0ff, rgba(0, 208, 255, 0.2509803922), transparent);
+  filter: blur(1px);
+  left: 20px;
+  top: 56px;
+  border-radius: 40% 40% 50% 50%/15% 15% 85% 85%;
+  z-index: -1;
+  animation: Rocket-fire 0.8s infinite ease-in-out alternate;
+}
+@keyframes Rocket-fire {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+}
+
+.Rocket-light .Rocket-body {
+  background-color: rgb(192, 192, 192);
+}
+.Rocket-light .Rocket-body .Rocket-top {
+  background-color: rgb(27, 24, 211);
+}
+.Rocket-light::before {
+  background-color: rgb(27, 24, 211);
+}
+
+@media (min-width: 1600px) {
+  .planet1 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: -400px;
+    left: -650px;
+    background-color: #ff74e6;
+    animation: UpDown1 4s infinite ease-in-out alternate;
+  }
+  @keyframes UpDown1 {
+    0% {
+      transform: translateY(0) translateX(0) rotate(-28deg);
+    }
+    100% {
+      transform: translateY(25px) translateX(15px) rotate(-28deg);
+    }
+  }
+  .planet1::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: #adef9b;
+    border: none;
+  }
+  .planet1::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #ff74e6;
+  }
+}
+@media (max-width: 1599px) {
+  .planet1 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: -400px;
+    left: -650px;
+    background-color: #ff74e6;
+    animation: UpDown1 4s infinite ease-in-out alternate;
+  }
+  @keyframes UpDown1 {
+    0% {
+      transform: translateY(0) translateX(0) rotate(-28deg);
+    }
+    100% {
+      transform: translateY(25px) translateX(15px) rotate(-28deg);
+    }
+  }
+  .planet1::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: #adef9b;
+    border: none;
+  }
+  .planet1::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #ff74e6;
+  }
+}
+@media (max-width: 768px) {
+  .planet1 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: -300px;
+    left: -230px;
+    background-color: #ff74e6;
+    animation: UpDown1-small 4s infinite ease-in-out alternate;
+  }
+  .planet1::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: #adef9b;
+    border: none;
+  }
+  .planet1::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #ff74e6;
+  }
+  @keyframes UpDown1-small {
+    0% {
+      transform: translateY(0) translateX(0) rotate(-28deg) scale(0.3);
+    }
+    100% {
+      transform: translateY(25px) translateX(15px) rotate(-28deg) scale(0.3);
+    }
+  }
+}
+
+.planet1-light {
+  background-color: #b0754d;
+}
+.planet1-light::before {
+  background-color: #ef9b9b;
+}
+.planet1-light::after {
+  background-color: #b0754d;
+}
+
+@media (min-width: 1600px) {
+  .planet2 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: 190px;
+    left: -500px;
+    background-color: #6a686c;
+    animation: UpDown2 3.5s infinite ease-in-out alternate;
+  }
+  @keyframes UpDown2 {
+    0% {
+      transform: translateY(0) rotate(208deg) scale(0.9);
+    }
+    100% {
+      transform: translateY(-25px) rotate(208deg) scale(0.95);
+    }
+  }
+  .planet2::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: rgba(104, 184, 245, 0.231372549);
+    border: solid 3px white;
+  }
+  .planet2::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #6a686c;
+  }
+}
+@media (max-width: 1599px) {
+  .planet2 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: 190px;
+    left: -500px;
+    background-color: #6a686c;
+    animation: UpDown2 3.5s infinite ease-in-out alternate;
+  }
+  @keyframes UpDown2 {
+    0% {
+      transform: translateY(0) rotate(208deg) scale(0.9);
+    }
+    100% {
+      transform: translateY(-25px) rotate(208deg) scale(0.95);
+    }
+  }
+  .planet2::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: rgba(104, 184, 245, 0.231372549);
+    border: solid 3px white;
+  }
+  .planet2::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #6a686c;
+  }
+}
+@media (max-width: 768px) {
+  .planet2 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: -30px;
+    left: 40px;
+    background-color: #6a686c;
+    animation: UpDown2-small 4s infinite ease-in-out alternate;
+  }
+  .planet2::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: rgba(104, 184, 245, 0.231372549);
+    border: solid 3px white;
+  }
+  .planet2::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #6a686c;
+  }
+  @keyframes UpDown2-small {
+    0% {
+      transform: translateY(0) rotate(208deg) scale(0.3);
+    }
+    100% {
+      transform: translateY(-25px) rotate(208deg) scale(0.35);
+    }
+  }
+}
+
+.planet2-light {
+  background-color: #5ab244;
+}
+.planet2-light::before {
+  background-color: rgba(239, 155, 155, 0.6431372549);
+  border: solid 3px rgb(206, 206, 206);
+}
+.planet2-light::after {
+  background-color: #5ab244;
+}
+
+@media (min-width: 1600px) {
+  .planet3 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: -335px;
+    left: 500px;
+    background-color: #8080c2;
+    animation: UpDown3 3s infinite ease-in-out alternate;
+  }
+  @keyframes UpDown3 {
+    0% {
+      transform: translateY(0) rotate(170deg) scale(0.8);
+    }
+    100% {
+      transform: translateY(-25px) rotate(180deg) scale(0.8);
+    }
+  }
+  .planet3::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: #ecc743;
+    border: none;
+  }
+  .planet3::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #8080c2;
+  }
+}
+@media (max-width: 1599px) {
+  .planet3 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: -335px;
+    left: 500px;
+    background-color: #8080c2;
+    animation: UpDown3 3s infinite ease-in-out alternate;
+  }
+  @keyframes UpDown3 {
+    0% {
+      transform: translateY(0) rotate(170deg) scale(0.8);
+    }
+    100% {
+      transform: translateY(-25px) rotate(180deg) scale(0.8);
+    }
+  }
+  .planet3::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: #ecc743;
+    border: none;
+  }
+  .planet3::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #8080c2;
+  }
+}
+@media (max-width: 768px) {
+  .planet3 {
+    z-index: 1;
+    position: absolute;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    top: 130px;
+    left: -170px;
+    background-color: #8080c2;
+    animation: UpDown3-small 4s infinite ease-in-out alternate;
+  }
+  .planet3::before {
+    content: "";
+    position: absolute;
+    width: 293px;
+    height: 65px;
+    left: -60px;
+    top: 56px;
+    border-radius: 50%;
+    background-color: #ecc743;
+    border: none;
+  }
+  .planet3::after {
+    content: "";
+    position: absolute;
+    width: 172px;
+    height: 58px;
+    border-radius: 50% 50% 20% 20%/20% 20% 80% 80%;
+    top: 80px;
+    background-color: #8080c2;
+  }
+  @keyframes UpDown3-small {
+    0% {
+      transform: translateY(0) rotate(170deg) scale(0.3);
+    }
+    100% {
+      transform: translateY(-25px) rotate(180deg) scale(0.3);
+    }
+  }
+}
+
+.planet3-light {
+  background-color: #2f5be1;
+}
+.planet3-light::before {
+  background-color: #5ab244;
+}
+.planet3-light::after {
+  background-color: #2f5be1;
+}
+
+@media (min-width: 1600px) {
+  .ufo-wrapper {
+    position: absolute;
+    top: -110px;
+    left: -300px;
+    animation: ufo-animation 7s infinite linear;
+  }
+  @keyframes ufo-animation {
+    0% {
+      transform: translateX(0) translateY(0) scale(0.18) rotate(-30deg);
+    }
+    100% {
+      transform: translateX(610px) translateY(-255px) scale(0.08) rotate(0deg);
+    }
+  }
+  .ufo-wrapper .ufo {
+    transform: translateY(-200px);
+    animation: y-axis 1s infinite ease;
+  }
+  @keyframes y-axis {
+    50% {
+      transform: translateY(200px);
+    }
+  }
+  .ufo-wrapper .ufo .ufo-body {
+    width: 600px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  .ufo-wrapper .ufo .ufo-body::before {
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 50%;
+    left: 100px;
+    top: -120px;
+  }
+  .ufo-wrapper .ufo .ufo-body::after {
+    position: absolute;
+    content: "";
+    width: 395px;
+    height: 250px;
+    left: 102.5px;
+    top: -70px;
+    border-radius: 40%;
+    background: radial-gradient(circle at 18% 40%, rgb(97, 217, 255) 10%, rgba(255, 255, 255, 0) 10.3%), radial-gradient(circle at 18% 40%, rgb(215, 215, 215) 12%, rgba(255, 255, 255, 0) 12.3%), radial-gradient(circle at 50% 38%, rgb(97, 217, 255) 16%, rgba(255, 255, 255, 0) 16.3%), radial-gradient(circle at 50% 38%, rgb(215, 215, 215) 19%, rgba(255, 255, 255, 0) 19.3%), radial-gradient(circle at 82% 40%, rgb(97, 217, 255) 10%, rgba(255, 255, 255, 0) 10.3%), radial-gradient(circle at 82% 40%, rgb(215, 215, 215) 12%, rgba(255, 255, 255, 0) 12.3%), gray;
+  }
+  .ufo-wrapper .ufo .ufo-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: #bdbdbd;
+    left: 262.5px;
+    top: -150px;
+    border-radius: 50%;
+  }
+  .ufo-wrapper .ufo .ufo-top::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 150px;
+    background-color: #bdbdbd;
+    left: 22.5px;
+    top: -90px;
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+  .ufo-wrapper .ufo .ufo-top::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: yellow;
+    left: 17.5px;
+    top: -100px;
+  }
+  .ufo-wrapper .ufo .ufo-bottom {
+    position: absolute;
+    width: 150px;
+    height: 125px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: 130px;
+    left: 225px;
+    z-index: -1;
+  }
+  .ufo-wrapper .ufo .ufo-bottom::before {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 100px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: -5px;
+    left: 190px;
+  }
+  .ufo-wrapper .ufo .ufo-bottom::after {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 100px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: -5px;
+    right: 190px;
+  }
+}
+@media (max-width: 1599px) {
+  .ufo-wrapper {
+    position: absolute;
+    top: -110px;
+    left: -300px;
+    animation: ufo-animation 7s infinite linear;
+  }
+  @keyframes ufo-animation {
+    0% {
+      transform: translateX(0) translateY(0) scale(0.18) rotate(-30deg);
+    }
+    100% {
+      transform: translateX(610px) translateY(-255px) scale(0.08) rotate(0deg);
+    }
+  }
+  .ufo-wrapper .ufo {
+    transform: translateY(-200px);
+    animation: y-axis 1s infinite ease;
+  }
+  @keyframes y-axis {
+    50% {
+      transform: translateY(200px);
+    }
+  }
+  .ufo-wrapper .ufo .ufo-body {
+    width: 600px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  .ufo-wrapper .ufo .ufo-body::before {
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 50%;
+    left: 100px;
+    top: -120px;
+  }
+  .ufo-wrapper .ufo .ufo-body::after {
+    position: absolute;
+    content: "";
+    width: 395px;
+    height: 250px;
+    left: 102.5px;
+    top: -70px;
+    border-radius: 40%;
+    background: radial-gradient(circle at 18% 40%, rgb(97, 217, 255) 10%, rgba(255, 255, 255, 0) 10.3%), radial-gradient(circle at 18% 40%, rgb(215, 215, 215) 12%, rgba(255, 255, 255, 0) 12.3%), radial-gradient(circle at 50% 38%, rgb(97, 217, 255) 16%, rgba(255, 255, 255, 0) 16.3%), radial-gradient(circle at 50% 38%, rgb(215, 215, 215) 19%, rgba(255, 255, 255, 0) 19.3%), radial-gradient(circle at 82% 40%, rgb(97, 217, 255) 10%, rgba(255, 255, 255, 0) 10.3%), radial-gradient(circle at 82% 40%, rgb(215, 215, 215) 12%, rgba(255, 255, 255, 0) 12.3%), gray;
+  }
+  .ufo-wrapper .ufo .ufo-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: #bdbdbd;
+    left: 262.5px;
+    top: -150px;
+    border-radius: 50%;
+  }
+  .ufo-wrapper .ufo .ufo-top::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 150px;
+    background-color: #bdbdbd;
+    left: 22.5px;
+    top: -90px;
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+  .ufo-wrapper .ufo .ufo-top::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: yellow;
+    left: 17.5px;
+    top: -100px;
+  }
+  .ufo-wrapper .ufo .ufo-bottom {
+    position: absolute;
+    width: 150px;
+    height: 125px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: 130px;
+    left: 225px;
+    z-index: -1;
+  }
+  .ufo-wrapper .ufo .ufo-bottom::before {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 100px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: -5px;
+    left: 190px;
+  }
+  .ufo-wrapper .ufo .ufo-bottom::after {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 100px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: -5px;
+    right: 190px;
+  }
+}
+@media (max-width: 768px) {
+  .ufo-wrapper {
+    position: absolute;
+    top: -110px;
+    left: -300px;
+    animation: ufo-animation2 6s infinite linear;
+  }
+  @keyframes ufo-animation2 {
+    0% {
+      transform: translateX(-420px) translateY(70px) scale(0.08) rotate(-30deg);
+    }
+    30% {
+      transform: translateX(-420px) translateY(70px) scale(0.08) rotate(-30deg);
+    }
+    100% {
+      transform: translateX(420px) translateY(-200px) scale(0.08) rotate(30deg);
+    }
+  }
+  .ufo-wrapper .ufo {
+    transform: translateY(-200px);
+    animation: y-axis 1s infinite ease;
+  }
+  @keyframes y-axis {
+    50% {
+      transform: translateY(200px);
+    }
+  }
+  .ufo-wrapper .ufo .ufo-body {
+    width: 600px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 50%;
+  }
+  .ufo-wrapper .ufo .ufo-body::before {
+    position: absolute;
+    content: "";
+    width: 400px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 50%;
+    left: 100px;
+    top: -120px;
+  }
+  .ufo-wrapper .ufo .ufo-body::after {
+    position: absolute;
+    content: "";
+    width: 395px;
+    height: 250px;
+    left: 102.5px;
+    top: -70px;
+    border-radius: 40%;
+    background: radial-gradient(circle at 18% 40%, rgb(97, 217, 255) 10%, rgba(255, 255, 255, 0) 10.3%), radial-gradient(circle at 18% 40%, rgb(215, 215, 215) 12%, rgba(255, 255, 255, 0) 12.3%), radial-gradient(circle at 50% 38%, rgb(97, 217, 255) 16%, rgba(255, 255, 255, 0) 16.3%), radial-gradient(circle at 50% 38%, rgb(215, 215, 215) 19%, rgba(255, 255, 255, 0) 19.3%), radial-gradient(circle at 82% 40%, rgb(97, 217, 255) 10%, rgba(255, 255, 255, 0) 10.3%), radial-gradient(circle at 82% 40%, rgb(215, 215, 215) 12%, rgba(255, 255, 255, 0) 12.3%), gray;
+  }
+  .ufo-wrapper .ufo .ufo-top {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background-color: #bdbdbd;
+    left: 262.5px;
+    top: -150px;
+    border-radius: 50%;
+  }
+  .ufo-wrapper .ufo .ufo-top::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 150px;
+    background-color: #bdbdbd;
+    left: 22.5px;
+    top: -90px;
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
+  .ufo-wrapper .ufo .ufo-top::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: yellow;
+    left: 17.5px;
+    top: -100px;
+  }
+  .ufo-wrapper .ufo .ufo-bottom {
+    position: absolute;
+    width: 150px;
+    height: 125px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: 130px;
+    left: 225px;
+    z-index: -1;
+  }
+  .ufo-wrapper .ufo .ufo-bottom::before {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 100px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: -5px;
+    left: 190px;
+  }
+  .ufo-wrapper .ufo .ufo-bottom::after {
+    position: absolute;
+    content: "";
+    width: 125px;
+    height: 100px;
+    background-color: #fff200;
+    border-radius: 50%;
+    top: -5px;
+    right: 190px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .alien {
+    position: absolute;
+    top: 130px;
+    right: -350px;
+    animation: alien-move 7s infinite linear alternate;
+  }
+  @keyframes alien-move {
+    0% {
+      transform: translateY(0) rotate(-15deg) scale(1.4);
+    }
+    100% {
+      transform: translateY(-50px) rotate(-15deg) scale(1.4);
+    }
+  }
+  .alien .alien-head {
+    position: absolute;
+    width: 161px;
+    height: 140px;
+    background-color: #8d8d8d;
+    border-radius: 50% 50% 32% 33%/50% 50% 50% 50%;
+  }
+  .alien .alien-head::before {
+    position: absolute;
+    content: "";
+    width: 80.5px;
+    height: 100px;
+    top: 85px;
+    background-color: #8d8d8d;
+    border-radius: 0 0 0% 100%;
+    transform: skewY(20deg);
+  }
+  .alien .alien-head::after {
+    position: absolute;
+    content: "";
+    width: 80.5px;
+    height: 100px;
+    top: 85px;
+    right: 1px;
+    background-color: #8d8d8d;
+    border-radius: 0 0 100% 0%;
+    transform: skewY(-20deg);
+  }
+  .alien .eye1 {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 70px;
+    left: 95.5px;
+    background-color: #8d8d8d;
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .alien .eye1::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 70px;
+    background-color: #8d8d8d;
+    animation: eye1-blink 3s infinite linear alternate;
+  }
+  @keyframes eye1-blink {
+    0% {
+      transform: translateY(0);
+    }
+    90% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100px);
+    }
+  }
+  .alien .eye1::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 50px;
+    top: 6px;
+    left: 4px;
+    background-color: #4d4d4d;
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+  }
+  .alien .eye1 .eye-in {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 35px;
+    top: 17px;
+    left: 9px;
+    background: rgb(100, 100, 100);
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+  }
+  .alien .eye1 .eye-in .eye-ball {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .alien .eye2 {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 70px;
+    left: -5.5px;
+    background-color: #8d8d8d;
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .alien .eye2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 70px;
+    background-color: #8d8d8d;
+    animation: eye1-blink 3s infinite linear alternate;
+  }
+  @keyframes eye1-blink {
+    0% {
+      transform: translateY(-100px);
+    }
+    90% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .alien .eye2::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 50px;
+    top: 6px;
+    left: 4px;
+    background-color: #4d4d4d;
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+  }
+  .alien .eye2 .eye-in {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 35px;
+    top: 17px;
+    left: 9px;
+    background: rgb(100, 100, 100);
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+  }
+  .alien .eye2 .eye-in .eye-ball {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .alien .nose {
+    position: absolute;
+    width: 4px;
+    height: 3px;
+    background-color: #4d4d4d;
+    border-radius: 45%;
+    top: 143px;
+    left: 74.5px;
+    transform: rotate(35deg);
+  }
+  .alien .nose::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 3px;
+    left: 6.5px;
+    top: -4.4px;
+    background-color: #4d4d4d;
+    border-radius: 45%;
+    transform: rotate(-70deg);
+  }
+  .alien .mouth {
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    top: 130px;
+    left: 65.5px;
+    border-radius: 50%;
+    border: solid 3px #4d4d4d;
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+            clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+  }
+  .alien .neck {
+    z-index: -1;
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-color: #8d8d8d;
+    left: 55px;
+    top: 170px;
+    box-shadow: 0 16.5em 1em -14em rgb(98, 98, 98) inset;
+  }
+  .alien .alien-body {
+    z-index: -2;
+    position: absolute;
+    width: 161px;
+    height: 300px;
+    background-color: #8d8d8d;
+    top: 215px;
+    left: 0px;
+    border-radius: 45%;
+  }
+  .alien .alien-body .arm1 {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -5px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    transform: rotate(35deg);
+    left: -20px;
+  }
+  .alien .alien-body .arm1::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: 30px;
+    transform: rotate(-60deg);
+  }
+  .alien .alien-body .arm1::before {
+    left: -55px;
+  }
+  .alien .alien-body .arm2 {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -5px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    transform: rotate(-35deg);
+    right: -20px;
+  }
+  .alien .alien-body .arm2::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: 30px;
+    transform: rotate(60deg);
+  }
+  .alien .alien-body .arm2::before {
+    right: -55px;
+  }
+  .alien .alien-body .hand1 {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: -25px;
+    left: -102px;
+    transform: scale(1.2);
+  }
+  .alien .alien-body .hand1 div {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 20px;
+    height: 70px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+  }
+  .alien .alien-body .hand1 div::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 70px;
+    left: 10px;
+    border-radius: 50%;
+    border: solid 5px #8d8d8d;
+  }
+  .alien .alien-body .hand1 div:nth-of-type(1) {
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    left: 17px;
+    top: -35px;
+    transform: scale(-1, 1) rotate(-30deg);
+  }
+  .alien .alien-body .hand1::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    z-index: 1;
+    top: -30px;
+    left: -5px;
+  }
+  .alien .alien-body .hand1::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    left: 25px;
+    top: -35px;
+    z-index: 1;
+  }
+  .alien .alien-body .hand2 {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: -25px;
+    left: 232px;
+    transform: scale(1.2);
+  }
+  .alien .alien-body .hand2 div {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 20px;
+    height: 70px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+  }
+  .alien .alien-body .hand2 div::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 70px;
+    left: 10px;
+    border-radius: 50%;
+    border: solid 5px #8d8d8d;
+  }
+  .alien .alien-body .hand2 div:nth-of-type(1) {
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    left: 17px;
+    top: -35px;
+    transform: scale(-1, 1) rotate(-30deg);
+  }
+  .alien .alien-body .hand2::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    z-index: 1;
+    top: -27px;
+    left: -5px;
+  }
+  .alien .alien-body .hand2::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    left: 25px;
+    top: -35px;
+    z-index: 1;
+  }
+  .alien .alien-body .leg1 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #8d8d8d;
+    top: 240px;
+    border-radius: 30%;
+    transform: rotate(20deg);
+    left: -20px;
+  }
+  .alien .alien-body .leg1::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 30%;
+    top: 40px;
+    left: 11px;
+    transform: rotate(-15deg);
+  }
+  .alien .alien-body .leg1::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 50% 30% 35% 35%;
+    top: 151px;
+    left: -8px;
+  }
+  .alien .alien-body .leg2 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #8d8d8d;
+    top: 240px;
+    border-radius: 30%;
+    transform: rotate(-20deg);
+    right: -20px;
+  }
+  .alien .alien-body .leg2::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 30%;
+    top: 40px;
+    left: -11px;
+    transform: rotate(15deg);
+  }
+  .alien .alien-body .leg2::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 50% 30% 35% 35%;
+    top: 151px;
+    left: -20px;
+  }
+}
+@media (max-width: 1599px) {
+  .alien {
+    position: absolute;
+    top: 130px;
+    right: -350px;
+    animation: alien-move 7s infinite linear alternate;
+  }
+  @keyframes alien-move {
+    0% {
+      transform: translateY(0) rotate(-15deg) scale(1.4);
+    }
+    100% {
+      transform: translateY(-50px) rotate(-15deg) scale(1.4);
+    }
+  }
+  .alien .alien-head {
+    position: absolute;
+    width: 161px;
+    height: 140px;
+    background-color: #8d8d8d;
+    border-radius: 50% 50% 32% 33%/50% 50% 50% 50%;
+  }
+  .alien .alien-head::before {
+    position: absolute;
+    content: "";
+    width: 80.5px;
+    height: 100px;
+    top: 85px;
+    background-color: #8d8d8d;
+    border-radius: 0 0 0% 100%;
+    transform: skewY(20deg);
+  }
+  .alien .alien-head::after {
+    position: absolute;
+    content: "";
+    width: 80.5px;
+    height: 100px;
+    top: 85px;
+    right: 1px;
+    background-color: #8d8d8d;
+    border-radius: 0 0 100% 0%;
+    transform: skewY(-20deg);
+  }
+  .alien .eye1 {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 70px;
+    left: 95.5px;
+    background-color: #8d8d8d;
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .alien .eye1::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 70px;
+    background-color: #8d8d8d;
+    animation: eye1-blink 3s infinite linear alternate;
+  }
+  @keyframes eye1-blink {
+    0% {
+      transform: translateY(0);
+    }
+    90% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100px);
+    }
+  }
+  .alien .eye1::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 50px;
+    top: 6px;
+    left: 4px;
+    background-color: #4d4d4d;
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+  }
+  .alien .eye1 .eye-in {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 35px;
+    top: 17px;
+    left: 9px;
+    background: rgb(100, 100, 100);
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+  }
+  .alien .eye1 .eye-in .eye-ball {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .alien .eye2 {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 70px;
+    left: -5.5px;
+    background-color: #8d8d8d;
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .alien .eye2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 70px;
+    background-color: #8d8d8d;
+    animation: eye1-blink 3s infinite linear alternate;
+  }
+  @keyframes eye1-blink {
+    0% {
+      transform: translateY(-100px);
+    }
+    90% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .alien .eye2::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 50px;
+    top: 6px;
+    left: 4px;
+    background-color: #4d4d4d;
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+  }
+  .alien .eye2 .eye-in {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 35px;
+    top: 17px;
+    left: 9px;
+    background: rgb(100, 100, 100);
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+  }
+  .alien .eye2 .eye-in .eye-ball {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .alien .nose {
+    position: absolute;
+    width: 4px;
+    height: 3px;
+    background-color: #4d4d4d;
+    border-radius: 45%;
+    top: 143px;
+    left: 74.5px;
+    transform: rotate(35deg);
+  }
+  .alien .nose::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 3px;
+    left: 6.5px;
+    top: -4.4px;
+    background-color: #4d4d4d;
+    border-radius: 45%;
+    transform: rotate(-70deg);
+  }
+  .alien .mouth {
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    top: 130px;
+    left: 65.5px;
+    border-radius: 50%;
+    border: solid 3px #4d4d4d;
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+            clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+  }
+  .alien .neck {
+    z-index: -1;
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-color: #8d8d8d;
+    left: 55px;
+    top: 170px;
+    box-shadow: 0 16.5em 1em -14em rgb(98, 98, 98) inset;
+  }
+  .alien .alien-body {
+    z-index: -2;
+    position: absolute;
+    width: 161px;
+    height: 300px;
+    background-color: #8d8d8d;
+    top: 215px;
+    left: 0px;
+    border-radius: 45%;
+  }
+  .alien .alien-body .arm1 {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -5px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    transform: rotate(35deg);
+    left: -20px;
+  }
+  .alien .alien-body .arm1::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: 30px;
+    transform: rotate(-60deg);
+  }
+  .alien .alien-body .arm1::before {
+    left: -55px;
+  }
+  .alien .alien-body .arm2 {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -5px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    transform: rotate(-35deg);
+    right: -20px;
+  }
+  .alien .alien-body .arm2::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: 30px;
+    transform: rotate(60deg);
+  }
+  .alien .alien-body .arm2::before {
+    right: -55px;
+  }
+  .alien .alien-body .hand1 {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: -25px;
+    left: -102px;
+    transform: scale(1.2);
+  }
+  .alien .alien-body .hand1 div {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 20px;
+    height: 70px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+  }
+  .alien .alien-body .hand1 div::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 70px;
+    left: 10px;
+    border-radius: 50%;
+    border: solid 5px #8d8d8d;
+  }
+  .alien .alien-body .hand1 div:nth-of-type(1) {
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    left: 17px;
+    top: -35px;
+    transform: scale(-1, 1) rotate(-30deg);
+  }
+  .alien .alien-body .hand1::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    z-index: 1;
+    top: -30px;
+    left: -5px;
+  }
+  .alien .alien-body .hand1::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    left: 25px;
+    top: -35px;
+    z-index: 1;
+  }
+  .alien .alien-body .hand2 {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: -25px;
+    left: 232px;
+    transform: scale(1.2);
+  }
+  .alien .alien-body .hand2 div {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 20px;
+    height: 70px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+  }
+  .alien .alien-body .hand2 div::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 70px;
+    left: 10px;
+    border-radius: 50%;
+    border: solid 5px #8d8d8d;
+  }
+  .alien .alien-body .hand2 div:nth-of-type(1) {
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    left: 17px;
+    top: -35px;
+    transform: scale(-1, 1) rotate(-30deg);
+  }
+  .alien .alien-body .hand2::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    z-index: 1;
+    top: -27px;
+    left: -5px;
+  }
+  .alien .alien-body .hand2::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    left: 25px;
+    top: -35px;
+    z-index: 1;
+  }
+  .alien .alien-body .leg1 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #8d8d8d;
+    top: 240px;
+    border-radius: 30%;
+    transform: rotate(20deg);
+    left: -20px;
+  }
+  .alien .alien-body .leg1::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 30%;
+    top: 40px;
+    left: 11px;
+    transform: rotate(-15deg);
+  }
+  .alien .alien-body .leg1::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 50% 30% 35% 35%;
+    top: 151px;
+    left: -8px;
+  }
+  .alien .alien-body .leg2 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #8d8d8d;
+    top: 240px;
+    border-radius: 30%;
+    transform: rotate(-20deg);
+    right: -20px;
+  }
+  .alien .alien-body .leg2::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 30%;
+    top: 40px;
+    left: -11px;
+    transform: rotate(15deg);
+  }
+  .alien .alien-body .leg2::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 50% 30% 35% 35%;
+    top: 151px;
+    left: -20px;
+  }
+}
+@media (max-width: 768px) {
+  .alien {
+    position: absolute;
+    top: 180px;
+    right: -50px;
+    animation: alien-move-small 7s infinite linear alternate;
+  }
+  @keyframes alien-move-small {
+    0% {
+      transform: translateY(0) rotate(-15deg) scale(0.5);
+    }
+    100% {
+      transform: translateY(-50px) rotate(-15deg) scale(0.5);
+    }
+  }
+  .alien .alien-head {
+    position: absolute;
+    width: 161px;
+    height: 140px;
+    background-color: #8d8d8d;
+    border-radius: 50% 50% 32% 33%/50% 50% 50% 50%;
+  }
+  .alien .alien-head::before {
+    position: absolute;
+    content: "";
+    width: 80.5px;
+    height: 100px;
+    top: 85px;
+    background-color: #8d8d8d;
+    border-radius: 0 0 0% 100%;
+    transform: skewY(20deg);
+  }
+  .alien .alien-head::after {
+    position: absolute;
+    content: "";
+    width: 80.5px;
+    height: 100px;
+    top: 85px;
+    right: 1px;
+    background-color: #8d8d8d;
+    border-radius: 0 0 100% 0%;
+    transform: skewY(-20deg);
+  }
+  .alien .eye1 {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 70px;
+    left: 95.5px;
+    background-color: #8d8d8d;
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .alien .eye1::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 70px;
+    background-color: #8d8d8d;
+    animation: eye1-blink 3s infinite linear alternate;
+  }
+  @keyframes eye1-blink {
+    0% {
+      transform: translateY(0);
+    }
+    90% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100px);
+    }
+  }
+  .alien .eye1::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 50px;
+    top: 6px;
+    left: 4px;
+    background-color: #4d4d4d;
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+  }
+  .alien .eye1 .eye-in {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 35px;
+    top: 17px;
+    left: 9px;
+    background: rgb(100, 100, 100);
+    border-radius: 57% 43% 70% 3%/70% 43% 57% 3%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+  }
+  .alien .eye1 .eye-in .eye-ball {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .alien .eye2 {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 70px;
+    left: -5.5px;
+    background-color: #8d8d8d;
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .alien .eye2::after {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 70px;
+    background-color: #8d8d8d;
+    animation: eye1-blink 3s infinite linear alternate;
+  }
+  @keyframes eye1-blink {
+    0% {
+      transform: translateY(-100px);
+    }
+    90% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .alien .eye2::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 50px;
+    top: 6px;
+    left: 4px;
+    background-color: #4d4d4d;
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+  }
+  .alien .eye2 .eye-in {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 35px;
+    top: 17px;
+    left: 9px;
+    background: rgb(100, 100, 100);
+    border-radius: 43% 57% 3% 70%/43% 70% 3% 57%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+  }
+  .alien .eye2 .eye-in .eye-ball {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    position: absolute;
+    border-radius: 50%;
+  }
+  .alien .nose {
+    position: absolute;
+    width: 4px;
+    height: 3px;
+    background-color: #4d4d4d;
+    border-radius: 45%;
+    top: 143px;
+    left: 74.5px;
+    transform: rotate(35deg);
+  }
+  .alien .nose::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 3px;
+    left: 6.5px;
+    top: -4.4px;
+    background-color: #4d4d4d;
+    border-radius: 45%;
+    transform: rotate(-70deg);
+  }
+  .alien .mouth {
+    position: absolute;
+    width: 30px;
+    height: 35px;
+    top: 130px;
+    left: 65.5px;
+    border-radius: 50%;
+    border: solid 3px #4d4d4d;
+    -webkit-clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+            clip-path: polygon(0 70%, 100% 70%, 100% 100%, 0 100%);
+  }
+  .alien .neck {
+    z-index: -1;
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    background-color: #8d8d8d;
+    left: 55px;
+    top: 170px;
+    box-shadow: 0 16.5em 1em -14em rgb(98, 98, 98) inset;
+  }
+  .alien .alien-body {
+    z-index: -2;
+    position: absolute;
+    width: 161px;
+    height: 300px;
+    background-color: #8d8d8d;
+    top: 215px;
+    left: 0px;
+    border-radius: 45%;
+  }
+  .alien .alien-body .arm1 {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -5px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    transform: rotate(35deg);
+    left: -20px;
+  }
+  .alien .alien-body .arm1::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: 30px;
+    transform: rotate(-60deg);
+  }
+  .alien .alien-body .arm1::before {
+    left: -55px;
+  }
+  .alien .alien-body .arm2 {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -5px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    transform: rotate(-35deg);
+    right: -20px;
+  }
+  .alien .alien-body .arm2::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: 30px;
+    transform: rotate(60deg);
+  }
+  .alien .alien-body .arm2::before {
+    right: -55px;
+  }
+  .alien .alien-body .hand1 {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: -25px;
+    left: -102px;
+    transform: scale(1.2);
+  }
+  .alien .alien-body .hand1 div {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 20px;
+    height: 70px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+  }
+  .alien .alien-body .hand1 div::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 70px;
+    left: 10px;
+    border-radius: 50%;
+    border: solid 5px #8d8d8d;
+  }
+  .alien .alien-body .hand1 div:nth-of-type(1) {
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    left: 17px;
+    top: -35px;
+    transform: scale(-1, 1) rotate(-30deg);
+  }
+  .alien .alien-body .hand1::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    z-index: 1;
+    top: -30px;
+    left: -5px;
+  }
+  .alien .alien-body .hand1::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    left: 25px;
+    top: -35px;
+    z-index: 1;
+  }
+  .alien .alien-body .hand2 {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 45%;
+    top: -25px;
+    left: 232px;
+    transform: scale(1.2);
+  }
+  .alien .alien-body .hand2 div {
+    position: absolute;
+    top: -30px;
+    left: -10px;
+    width: 20px;
+    height: 70px;
+    overflow: hidden;
+    transform: rotate(-20deg);
+  }
+  .alien .alien-body .hand2 div::before {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 70px;
+    left: 10px;
+    border-radius: 50%;
+    border: solid 5px #8d8d8d;
+  }
+  .alien .alien-body .hand2 div:nth-of-type(1) {
+    position: absolute;
+    width: 20px;
+    height: 70px;
+    left: 17px;
+    top: -35px;
+    transform: scale(-1, 1) rotate(-30deg);
+  }
+  .alien .alien-body .hand2::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    z-index: 1;
+    top: -27px;
+    left: -5px;
+  }
+  .alien .alien-body .hand2::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffff00;
+    border-radius: 50%;
+    left: 25px;
+    top: -35px;
+    z-index: 1;
+  }
+  .alien .alien-body .leg1 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #8d8d8d;
+    top: 240px;
+    border-radius: 30%;
+    transform: rotate(20deg);
+    left: -20px;
+  }
+  .alien .alien-body .leg1::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 30%;
+    top: 40px;
+    left: 11px;
+    transform: rotate(-15deg);
+  }
+  .alien .alien-body .leg1::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 50% 30% 35% 35%;
+    top: 151px;
+    left: -8px;
+  }
+  .alien .alien-body .leg2 {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #8d8d8d;
+    top: 240px;
+    border-radius: 30%;
+    transform: rotate(-20deg);
+    right: -20px;
+  }
+  .alien .alien-body .leg2::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 150px;
+    background-color: #8d8d8d;
+    border-radius: 30%;
+    top: 40px;
+    left: -11px;
+    transform: rotate(15deg);
+  }
+  .alien .alien-body .leg2::after {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 40px;
+    background-color: #8d8d8d;
+    border-radius: 50% 30% 35% 35%;
+    top: 151px;
+    left: -20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .satellite {
+    position: absolute;
+    top: -60px;
+    left: -380px;
+    animation: satellite-anim 5s linear infinite alternate;
+  }
+  @keyframes satellite-anim {
+    0% {
+      transform: translateX(0) scale(0.04) rotate(40deg);
+    }
+    100% {
+      transform: translateX(200px) scale(0.04) rotate(40deg);
+    }
+  }
+  .satellite .satellite-top .parabolic {
+    position: absolute;
+    width: 600px;
+    height: 250px;
+    left: -50px;
+    top: -255px;
+    background-color: rgb(185, 197, 77);
+    border-radius: 0 0 290px 290px;
+  }
+  .satellite .satellite-top .parabolic::before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: #808080;
+    top: 230px;
+    left: 150px;
+  }
+  .satellite .satellite-top .parabolic::after {
+    position: absolute;
+    content: "";
+    width: 630px;
+    height: 30px;
+    background-color: #808080;
+    top: -30px;
+    left: -15px;
+    border-radius: 15px;
+  }
+  .satellite .satellite-top .antenna {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    top: -770px;
+    left: -50px;
+    background: repeating-conic-gradient(rgb(169, 169, 169) 0 4%, rgba(0, 0, 0, 0) 0% 12%);
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+    z-index: -1;
+  }
+  .satellite .satellite-top .antenna2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(185, 197, 77);
+    left: 219px;
+    top: -640px;
+  }
+  .satellite .satellite-top .antenna2::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 80px;
+    background-color: rgb(169, 169, 169);
+    left: 25.5px;
+    top: 60px;
+  }
+  .satellite .satellite-body {
+    width: 500px;
+    height: 750px;
+    background-color: #d4531c;
+    border-radius: 10%;
+  }
+  .satellite .satellite-right {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: #306ea8;
+    background-image: repeating-linear-gradient(to bottom, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 180px), repeating-linear-gradient(to right, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 240px);
+    top: 150px;
+    border-radius: 25px;
+    left: 650px;
+  }
+  .satellite .satellite-right::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    background-color: rgb(184, 184, 184);
+    top: 100px;
+    box-shadow: -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-right::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    top: 250px;
+    background-color: rgb(184, 184, 184);
+    box-shadow: -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-right::before {
+    left: -150px;
+  }
+  .satellite .satellite-right::after {
+    left: -150px;
+  }
+  .satellite .satellite-left {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: #306ea8;
+    background-image: repeating-linear-gradient(to bottom, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 180px), repeating-linear-gradient(to right, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 240px);
+    top: 150px;
+    border-radius: 25px;
+    right: 650px;
+  }
+  .satellite .satellite-left::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    background-color: rgb(184, 184, 184);
+    top: 100px;
+    box-shadow: 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-left::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    top: 250px;
+    background-color: rgb(184, 184, 184);
+    box-shadow: 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-left::before {
+    right: -150px;
+  }
+  .satellite .satellite-left::after {
+    right: -150px;
+  }
+  .satellite .satellite-bottom {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 100px;
+    top: 650px;
+    background-color: gray;
+    border-radius: 35%;
+    z-index: -1;
+  }
+  .satellite .satellite-bottom::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 50px;
+    top: 180px;
+    left: 50px;
+    background-color: rgb(197, 91, 91);
+    border-radius: 25%;
+  }
+}
+@media (max-width: 1599px) {
+  .satellite {
+    position: absolute;
+    top: -60px;
+    left: -380px;
+    animation: satellite-anim 5s linear infinite alternate;
+  }
+  @keyframes satellite-anim {
+    0% {
+      transform: translateX(0) scale(0.04) rotate(40deg);
+    }
+    100% {
+      transform: translateX(200px) scale(0.04) rotate(40deg);
+    }
+  }
+  .satellite .satellite-top .parabolic {
+    position: absolute;
+    width: 600px;
+    height: 250px;
+    left: -50px;
+    top: -255px;
+    background-color: rgb(185, 197, 77);
+    border-radius: 0 0 290px 290px;
+  }
+  .satellite .satellite-top .parabolic::before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: #808080;
+    top: 230px;
+    left: 150px;
+  }
+  .satellite .satellite-top .parabolic::after {
+    position: absolute;
+    content: "";
+    width: 630px;
+    height: 30px;
+    background-color: #808080;
+    top: -30px;
+    left: -15px;
+    border-radius: 15px;
+  }
+  .satellite .satellite-top .antenna {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    top: -770px;
+    left: -50px;
+    background: repeating-conic-gradient(rgb(169, 169, 169) 0 4%, rgba(0, 0, 0, 0) 0% 12%);
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+    z-index: -1;
+  }
+  .satellite .satellite-top .antenna2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(185, 197, 77);
+    left: 219px;
+    top: -640px;
+  }
+  .satellite .satellite-top .antenna2::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 80px;
+    background-color: rgb(169, 169, 169);
+    left: 25.5px;
+    top: 60px;
+  }
+  .satellite .satellite-body {
+    width: 500px;
+    height: 750px;
+    background-color: #d4531c;
+    border-radius: 10%;
+  }
+  .satellite .satellite-right {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: #306ea8;
+    background-image: repeating-linear-gradient(to bottom, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 180px), repeating-linear-gradient(to right, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 240px);
+    top: 150px;
+    border-radius: 25px;
+    left: 650px;
+  }
+  .satellite .satellite-right::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    background-color: rgb(184, 184, 184);
+    top: 100px;
+    box-shadow: -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-right::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    top: 250px;
+    background-color: rgb(184, 184, 184);
+    box-shadow: -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-right::before {
+    left: -150px;
+  }
+  .satellite .satellite-right::after {
+    left: -150px;
+  }
+  .satellite .satellite-left {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: #306ea8;
+    background-image: repeating-linear-gradient(to bottom, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 180px), repeating-linear-gradient(to right, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 240px);
+    top: 150px;
+    border-radius: 25px;
+    right: 650px;
+  }
+  .satellite .satellite-left::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    background-color: rgb(184, 184, 184);
+    top: 100px;
+    box-shadow: 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-left::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    top: 250px;
+    background-color: rgb(184, 184, 184);
+    box-shadow: 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-left::before {
+    right: -150px;
+  }
+  .satellite .satellite-left::after {
+    right: -150px;
+  }
+  .satellite .satellite-bottom {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 100px;
+    top: 650px;
+    background-color: gray;
+    border-radius: 35%;
+    z-index: -1;
+  }
+  .satellite .satellite-bottom::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 50px;
+    top: 180px;
+    left: 50px;
+    background-color: rgb(197, 91, 91);
+    border-radius: 25%;
+  }
+}
+@media (max-width: 768px) {
+  .satellite {
+    position: absolute;
+    top: -670;
+    left: -180px;
+    animation: satellite-anim-small 5s linear infinite alternate;
+  }
+  @keyframes satellite-anim-small {
+    0% {
+      transform: translateX(0) scale(0.025) rotate(40deg);
+    }
+    100% {
+      transform: translateX(150px) scale(0.025) rotate(40deg);
+    }
+  }
+  .satellite .satellite-top .parabolic {
+    position: absolute;
+    width: 600px;
+    height: 250px;
+    left: -50px;
+    top: -255px;
+    background-color: rgb(185, 197, 77);
+    border-radius: 0 0 290px 290px;
+  }
+  .satellite .satellite-top .parabolic::before {
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: #808080;
+    top: 230px;
+    left: 150px;
+  }
+  .satellite .satellite-top .parabolic::after {
+    position: absolute;
+    content: "";
+    width: 630px;
+    height: 30px;
+    background-color: #808080;
+    top: -30px;
+    left: -15px;
+    border-radius: 15px;
+  }
+  .satellite .satellite-top .antenna {
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    top: -770px;
+    left: -50px;
+    background: repeating-conic-gradient(rgb(169, 169, 169) 0 4%, rgba(0, 0, 0, 0) 0% 12%);
+    -webkit-clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+    z-index: -1;
+  }
+  .satellite .satellite-top .antenna2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(185, 197, 77);
+    left: 219px;
+    top: -640px;
+  }
+  .satellite .satellite-top .antenna2::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 80px;
+    background-color: rgb(169, 169, 169);
+    left: 25.5px;
+    top: 60px;
+  }
+  .satellite .satellite-body {
+    width: 500px;
+    height: 750px;
+    background-color: #d4531c;
+    border-radius: 10%;
+  }
+  .satellite .satellite-right {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: #306ea8;
+    background-image: repeating-linear-gradient(to bottom, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 180px), repeating-linear-gradient(to right, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 240px);
+    top: 150px;
+    border-radius: 25px;
+    left: 650px;
+  }
+  .satellite .satellite-right::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    background-color: rgb(184, 184, 184);
+    top: 100px;
+    box-shadow: -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-right::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    top: 250px;
+    background-color: rgb(184, 184, 184);
+    box-shadow: -25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-right::before {
+    left: -150px;
+  }
+  .satellite .satellite-right::after {
+    left: -150px;
+  }
+  .satellite .satellite-left {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    background-color: #306ea8;
+    background-image: repeating-linear-gradient(to bottom, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 180px), repeating-linear-gradient(to right, rgb(184, 184, 184), 40px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 240px);
+    top: 150px;
+    border-radius: 25px;
+    right: 650px;
+  }
+  .satellite .satellite-left::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    background-color: rgb(184, 184, 184);
+    top: 100px;
+    box-shadow: 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-left::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 30px;
+    top: 250px;
+    background-color: rgb(184, 184, 184);
+    box-shadow: 25px 0px 0px -10px rgba(131, 131, 131, 0.6) inset;
+  }
+  .satellite .satellite-left::before {
+    right: -150px;
+  }
+  .satellite .satellite-left::after {
+    right: -150px;
+  }
+  .satellite .satellite-bottom {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 100px;
+    top: 650px;
+    background-color: gray;
+    border-radius: 35%;
+    z-index: -1;
+  }
+  .satellite .satellite-bottom::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 50px;
+    top: 180px;
+    left: 50px;
+    background-color: rgb(197, 91, 91);
+    border-radius: 25%;
+  }
+}
+
+.astronaut {
+  transform: scale(0.2);
+}
+.astronaut.N-astronaut {
+  position: absolute;
+  top: -141px;
+  left: 83px;
+  z-index: -1;
+}
+@media (min-width: 1600px) {
+  .astronaut .astronaut-head div,
+  .astronaut .N-astronaut-head div {
+    width: 120px;
+    height: 100px;
+    background-color: rgb(135, 176, 175);
+    border-radius: 50%;
+  }
+  .astronaut .astronaut-head div div,
+  .astronaut .N-astronaut-head div div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    left: 70px;
+    top: 15px;
+  }
+  .astronaut .astronaut-head::before,
+  .astronaut .N-astronaut-head::before {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+    left: 5px;
+    top: -10px;
+    z-index: -1;
+  }
+  .astronaut .astronaut-head::after,
+  .astronaut .N-astronaut-head::after {
+    position: absolute;
+    content: "";
+    width: 95px;
+    height: 5px;
+    background-color: red;
+    left: 20px;
+    top: 102px;
+    border-radius: 30%;
+  }
+  .astronaut .astronaut-body {
+    width: 150px;
+    height: 180px;
+    background-color: white;
+    border-radius: 25% 42% 31% 51%/15% 38% 39% 59%;
+  }
+  .astronaut .astronaut-body::before {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: 283px;
+    left: 13px;
+    background-color: red;
+    border-radius: 30%;
+    z-index: 1;
+    transform: rotate(-15deg);
+  }
+  .astronaut .astronaut-body::after {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: 286px;
+    left: 103px;
+    background-color: red;
+    border-radius: 30%;
+    z-index: 1;
+    transform: rotate(-30deg);
+  }
+  .astronaut .astronaut-body.N-astronaut-body::before {
+    top: 273px;
+    left: 8px;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body.N-astronaut-body::after {
+    left: 88px;
+    transform: rotate(-20deg);
+  }
+  .astronaut .astronaut-body .left-arm {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: white;
+    border-radius: 45%;
+    left: -30px;
+    top: 80px;
+    transform: rotate(-45deg);
+  }
+  .astronaut .astronaut-body .left-arm::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 120px;
+    top: -70px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body .left-arm::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 5px;
+    background-color: red;
+    border-radius: 30%;
+    transform: rotate(15deg);
+    top: 6px;
+    left: 4px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm {
+    animation: N-left-arm-animation 3s infinite linear alternate;
+  }
+  @keyframes N-left-arm-animation {
+    0% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    70% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    80% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: -90px;
+    left: 40px;
+    border-radius: 50%;
+    transform: rotate(10deg);
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .flag {
+    position: absolute;
+    width: 550px;
+    height: 20px;
+    background-color: rgb(163, 163, 163);
+    top: -90px;
+    left: -210px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .flag::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 200px;
+    background-color: rgb(237, 105, 105);
+    left: 450px;
+    top: -200px;
+  }
+  .astronaut .astronaut-body .left-arm.nameast-light {
+    animation: N-light-left-arm-animation 3s infinite linear alternate;
+  }
+  @keyframes N-light-left-arm-animation {
+    0% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    70% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    80% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+  .astronaut .astronaut-body .left-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: 3px;
+    left: -65px;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+  }
+  .astronaut .astronaut-body .left-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .left-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .right-arm {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    border-radius: 45%;
+    left: 115px;
+    top: 95px;
+    transform: rotate(120deg);
+  }
+  .astronaut .astronaut-body .right-arm::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 120px;
+    top: -70px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body .right-arm::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 5px;
+    background-color: red;
+    border-radius: 30%;
+    transform: rotate(5deg);
+    top: 20px;
+    left: 3px;
+  }
+  .astronaut .astronaut-body .right-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: 225px;
+    left: 200px;
+    border-radius: 50%;
+    transform: scaleY(-1) rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .left-leg {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background-color: white;
+    top: 200px;
+    left: 20px;
+    border-radius: 45%;
+    transform: rotate(35deg);
+  }
+  .astronaut .astronaut-body .left-leg::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    top: 45px;
+    left: 30px;
+    background-color: white;
+    border-radius: 45%;
+    transform: rotate(-65deg);
+  }
+  .astronaut .astronaut-body .left-leg::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 50px;
+    background-color: rgb(133, 133, 133);
+    transform: rotate(20deg);
+    border-radius: 45%;
+    top: 95px;
+    left: 85px;
+  }
+  .astronaut .astronaut-body .left-leg.N-left-leg::before {
+    width: 55px;
+    height: 140px;
+    top: 40px;
+    left: 20px;
+    transform: rotate(-35deg);
+  }
+  .astronaut .astronaut-body .left-leg.N-left-leg::after {
+    transform: rotate(40deg);
+    top: 140px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .right-leg {
+    position: absolute;
+    width: 55px;
+    height: 80px;
+    background-color: white;
+    top: 230px;
+    left: 90px;
+    border-radius: 45%;
+    transform: rotate(-25deg);
+  }
+  .astronaut .astronaut-body .right-leg::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    top: 35px;
+    left: 17px;
+    background-color: white;
+    border-radius: 45%;
+    transform: rotate(-40deg);
+  }
+  .astronaut .astronaut-body .right-leg::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 50px;
+    background-color: rgb(133, 133, 133);
+    transform: rotate(50deg);
+    border-radius: 45%;
+    top: 95px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg {
+    width: 60px;
+    height: 100px;
+    top: 200px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg::before {
+    width: 55px;
+    height: 140px;
+    top: 40px;
+    left: 20px;
+    transform: rotate(-35deg);
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg::after {
+    transform: rotate(40deg);
+    top: 140px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .body-middle {
+    position: absolute;
+    width: 90px;
+    height: 65px;
+    border: solid 4px rgb(133, 133, 133);
+    left: 27px;
+    top: 150px;
+    border-radius: 15%;
+    background: radial-gradient(circle at 20% 30%, white 6%, rgba(255, 255, 255, 0) 6.5%), radial-gradient(circle at 20% 30%, gray 12%, rgba(255, 255, 255, 0) 12.5%), radial-gradient(circle at 20% 70%, gray 12%, rgba(255, 255, 255, 0) 12.5%), white;
+  }
+  .astronaut .astronaut-body .body-back {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background-color: rgb(226, 226, 226);
+    border: solid 3px gray;
+    border-radius: 32%;
+    z-index: -2;
+    left: 80px;
+    top: 80px;
+  }
+}
+@media (max-width: 1599px) {
+  .astronaut .astronaut-head div,
+  .astronaut .N-astronaut-head div {
+    width: 120px;
+    height: 100px;
+    background-color: rgb(135, 176, 175);
+    border-radius: 50%;
+  }
+  .astronaut .astronaut-head div div,
+  .astronaut .N-astronaut-head div div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    left: 70px;
+    top: 15px;
+  }
+  .astronaut .astronaut-head::before,
+  .astronaut .N-astronaut-head::before {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+    left: 5px;
+    top: -10px;
+    z-index: -1;
+  }
+  .astronaut .astronaut-head::after,
+  .astronaut .N-astronaut-head::after {
+    position: absolute;
+    content: "";
+    width: 95px;
+    height: 5px;
+    background-color: red;
+    left: 20px;
+    top: 102px;
+    border-radius: 30%;
+  }
+  .astronaut .astronaut-body {
+    width: 150px;
+    height: 180px;
+    background-color: white;
+    border-radius: 25% 42% 31% 51%/15% 38% 39% 59%;
+  }
+  .astronaut .astronaut-body::before {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: 283px;
+    left: 13px;
+    background-color: red;
+    border-radius: 30%;
+    z-index: 1;
+    transform: rotate(-15deg);
+  }
+  .astronaut .astronaut-body::after {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: 286px;
+    left: 103px;
+    background-color: red;
+    border-radius: 30%;
+    z-index: 1;
+    transform: rotate(-30deg);
+  }
+  .astronaut .astronaut-body.N-astronaut-body::before {
+    top: 273px;
+    left: 8px;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body.N-astronaut-body::after {
+    left: 88px;
+    transform: rotate(-20deg);
+  }
+  .astronaut .astronaut-body .left-arm {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: white;
+    border-radius: 45%;
+    left: -30px;
+    top: 80px;
+    transform: rotate(-45deg);
+  }
+  .astronaut .astronaut-body .left-arm::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 120px;
+    top: -70px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body .left-arm::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 5px;
+    background-color: red;
+    border-radius: 30%;
+    transform: rotate(15deg);
+    top: 6px;
+    left: 4px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm {
+    animation: N-left-arm-animation 3s infinite linear alternate;
+  }
+  @keyframes N-left-arm-animation {
+    0% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    70% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    80% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: -90px;
+    left: 40px;
+    border-radius: 50%;
+    transform: rotate(10deg);
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .flag {
+    position: absolute;
+    width: 550px;
+    height: 20px;
+    background-color: rgb(163, 163, 163);
+    top: -90px;
+    left: -210px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .flag::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 200px;
+    background-color: rgb(237, 105, 105);
+    left: 450px;
+    top: -200px;
+  }
+  .astronaut .astronaut-body .left-arm.nameast-light {
+    animation: N-light-left-arm-animation 3s infinite linear alternate;
+  }
+  @keyframes N-light-left-arm-animation {
+    0% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    70% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    80% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+  .astronaut .astronaut-body .left-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: 3px;
+    left: -65px;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+  }
+  .astronaut .astronaut-body .left-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .left-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .right-arm {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    border-radius: 45%;
+    left: 115px;
+    top: 95px;
+    transform: rotate(120deg);
+  }
+  .astronaut .astronaut-body .right-arm::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 120px;
+    top: -70px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body .right-arm::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 5px;
+    background-color: red;
+    border-radius: 30%;
+    transform: rotate(5deg);
+    top: 20px;
+    left: 3px;
+  }
+  .astronaut .astronaut-body .right-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: 225px;
+    left: 200px;
+    border-radius: 50%;
+    transform: scaleY(-1) rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .left-leg {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background-color: white;
+    top: 200px;
+    left: 20px;
+    border-radius: 45%;
+    transform: rotate(35deg);
+  }
+  .astronaut .astronaut-body .left-leg::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    top: 45px;
+    left: 30px;
+    background-color: white;
+    border-radius: 45%;
+    transform: rotate(-65deg);
+  }
+  .astronaut .astronaut-body .left-leg::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 50px;
+    background-color: rgb(133, 133, 133);
+    transform: rotate(20deg);
+    border-radius: 45%;
+    top: 95px;
+    left: 85px;
+  }
+  .astronaut .astronaut-body .left-leg.N-left-leg::before {
+    width: 55px;
+    height: 140px;
+    top: 40px;
+    left: 20px;
+    transform: rotate(-35deg);
+  }
+  .astronaut .astronaut-body .left-leg.N-left-leg::after {
+    transform: rotate(40deg);
+    top: 140px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .right-leg {
+    position: absolute;
+    width: 55px;
+    height: 80px;
+    background-color: white;
+    top: 230px;
+    left: 90px;
+    border-radius: 45%;
+    transform: rotate(-25deg);
+  }
+  .astronaut .astronaut-body .right-leg::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    top: 35px;
+    left: 17px;
+    background-color: white;
+    border-radius: 45%;
+    transform: rotate(-40deg);
+  }
+  .astronaut .astronaut-body .right-leg::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 50px;
+    background-color: rgb(133, 133, 133);
+    transform: rotate(50deg);
+    border-radius: 45%;
+    top: 95px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg {
+    width: 60px;
+    height: 100px;
+    top: 200px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg::before {
+    width: 55px;
+    height: 140px;
+    top: 40px;
+    left: 20px;
+    transform: rotate(-35deg);
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg::after {
+    transform: rotate(40deg);
+    top: 140px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .body-middle {
+    position: absolute;
+    width: 90px;
+    height: 65px;
+    border: solid 4px rgb(133, 133, 133);
+    left: 27px;
+    top: 150px;
+    border-radius: 15%;
+    background: radial-gradient(circle at 20% 30%, white 6%, rgba(255, 255, 255, 0) 6.5%), radial-gradient(circle at 20% 30%, gray 12%, rgba(255, 255, 255, 0) 12.5%), radial-gradient(circle at 20% 70%, gray 12%, rgba(255, 255, 255, 0) 12.5%), white;
+  }
+  .astronaut .astronaut-body .body-back {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background-color: rgb(226, 226, 226);
+    border: solid 3px gray;
+    border-radius: 32%;
+    z-index: -2;
+    left: 80px;
+    top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .astronaut .astronaut-head div,
+  .astronaut .N-astronaut-head div {
+    width: 120px;
+    height: 100px;
+    background-color: rgb(135, 176, 175);
+    border-radius: 50%;
+  }
+  .astronaut .astronaut-head div div,
+  .astronaut .N-astronaut-head div div {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    left: 70px;
+    top: 15px;
+  }
+  .astronaut .astronaut-head::before,
+  .astronaut .N-astronaut-head::before {
+    position: absolute;
+    content: "";
+    width: 140px;
+    height: 130px;
+    background-color: white;
+    border-radius: 50%;
+    left: 5px;
+    top: -10px;
+    z-index: -1;
+  }
+  .astronaut .astronaut-head::after,
+  .astronaut .N-astronaut-head::after {
+    position: absolute;
+    content: "";
+    width: 95px;
+    height: 5px;
+    background-color: red;
+    left: 20px;
+    top: 102px;
+    border-radius: 30%;
+  }
+  .astronaut .astronaut-body {
+    width: 150px;
+    height: 180px;
+    background-color: white;
+    border-radius: 25% 42% 31% 51%/15% 38% 39% 59%;
+  }
+  .astronaut .astronaut-body::before {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: 283px;
+    left: 13px;
+    background-color: red;
+    border-radius: 30%;
+    z-index: 1;
+    transform: rotate(-15deg);
+  }
+  .astronaut .astronaut-body::after {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 5px;
+    top: 286px;
+    left: 103px;
+    background-color: red;
+    border-radius: 30%;
+    z-index: 1;
+    transform: rotate(-30deg);
+  }
+  .astronaut .astronaut-body.N-astronaut-body::before {
+    top: 273px;
+    left: 8px;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body.N-astronaut-body::after {
+    left: 88px;
+    transform: rotate(-20deg);
+  }
+  .astronaut .astronaut-body .left-arm {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-color: white;
+    border-radius: 45%;
+    left: -30px;
+    top: 80px;
+    transform: rotate(-45deg);
+  }
+  .astronaut .astronaut-body .left-arm::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 120px;
+    top: -70px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body .left-arm::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 5px;
+    background-color: red;
+    border-radius: 30%;
+    transform: rotate(15deg);
+    top: 6px;
+    left: 4px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm {
+    animation: N-left-arm-animation 3s infinite linear alternate;
+  }
+  @keyframes N-left-arm-animation {
+    0% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    70% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    80% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: -90px;
+    left: 40px;
+    border-radius: 50%;
+    transform: rotate(10deg);
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .N-left-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .flag {
+    position: absolute;
+    width: 550px;
+    height: 20px;
+    background-color: rgb(163, 163, 163);
+    top: -90px;
+    left: -210px;
+  }
+  .astronaut .astronaut-body .left-arm.N-left-arm .flag::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 200px;
+    background-color: rgb(237, 105, 105);
+    left: 450px;
+    top: -200px;
+  }
+  .astronaut .astronaut-body .left-arm.nameast-light {
+    animation: N-light-left-arm-animation 3s infinite linear alternate;
+  }
+  @keyframes N-light-left-arm-animation {
+    0% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    70% {
+      transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+    }
+    80% {
+      transform: rotate(-30deg);
+    }
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+  .astronaut .astronaut-body .left-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: 3px;
+    left: -65px;
+    border-radius: 50%;
+    transform: rotate(-10deg);
+  }
+  .astronaut .astronaut-body .left-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .left-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .right-arm {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: white;
+    border-radius: 45%;
+    left: 115px;
+    top: 95px;
+    transform: rotate(120deg);
+  }
+  .astronaut .astronaut-body .right-arm::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 120px;
+    top: -70px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(25deg);
+  }
+  .astronaut .astronaut-body .right-arm::after {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 5px;
+    background-color: red;
+    border-radius: 30%;
+    transform: rotate(5deg);
+    top: 20px;
+    left: 3px;
+  }
+  .astronaut .astronaut-body .right-hand {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background-color: rgb(133, 133, 133);
+    top: 225px;
+    left: 200px;
+    border-radius: 50%;
+    transform: scaleY(-1) rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-hand::before {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 40px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: -10px;
+    left: 13px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-hand::after {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 25px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 50%;
+    top: 11px;
+    left: 1px;
+    border-bottom: solid red 3px;
+  }
+  .astronaut .astronaut-body .left-leg {
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    background-color: white;
+    top: 200px;
+    left: 20px;
+    border-radius: 45%;
+    transform: rotate(35deg);
+  }
+  .astronaut .astronaut-body .left-leg::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    top: 45px;
+    left: 30px;
+    background-color: white;
+    border-radius: 45%;
+    transform: rotate(-65deg);
+  }
+  .astronaut .astronaut-body .left-leg::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 50px;
+    background-color: rgb(133, 133, 133);
+    transform: rotate(20deg);
+    border-radius: 45%;
+    top: 95px;
+    left: 85px;
+  }
+  .astronaut .astronaut-body .left-leg.N-left-leg::before {
+    width: 55px;
+    height: 140px;
+    top: 40px;
+    left: 20px;
+    transform: rotate(-35deg);
+  }
+  .astronaut .astronaut-body .left-leg.N-left-leg::after {
+    transform: rotate(40deg);
+    top: 140px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .right-leg {
+    position: absolute;
+    width: 55px;
+    height: 80px;
+    background-color: white;
+    top: 230px;
+    left: 90px;
+    border-radius: 45%;
+    transform: rotate(-25deg);
+  }
+  .astronaut .astronaut-body .right-leg::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 100px;
+    top: 35px;
+    left: 17px;
+    background-color: white;
+    border-radius: 45%;
+    transform: rotate(-40deg);
+  }
+  .astronaut .astronaut-body .right-leg::after {
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 50px;
+    background-color: rgb(133, 133, 133);
+    transform: rotate(50deg);
+    border-radius: 45%;
+    top: 95px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg {
+    width: 60px;
+    height: 100px;
+    top: 200px;
+    transform: rotate(15deg);
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg::before {
+    width: 55px;
+    height: 140px;
+    top: 40px;
+    left: 20px;
+    transform: rotate(-35deg);
+  }
+  .astronaut .astronaut-body .right-leg.N-right-leg::after {
+    transform: rotate(40deg);
+    top: 140px;
+    left: 60px;
+  }
+  .astronaut .astronaut-body .body-middle {
+    position: absolute;
+    width: 90px;
+    height: 65px;
+    border: solid 4px rgb(133, 133, 133);
+    left: 27px;
+    top: 150px;
+    border-radius: 15%;
+    background: radial-gradient(circle at 20% 30%, white 6%, rgba(255, 255, 255, 0) 6.5%), radial-gradient(circle at 20% 30%, gray 12%, rgba(255, 255, 255, 0) 12.5%), radial-gradient(circle at 20% 70%, gray 12%, rgba(255, 255, 255, 0) 12.5%), white;
+  }
+  .astronaut .astronaut-body .body-back {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    background-color: rgb(226, 226, 226);
+    border: solid 3px gray;
+    border-radius: 32%;
+    z-index: -2;
+    left: 80px;
+    top: 80px;
+  }
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  background: rgb(64, 55, 91);
+  margin: 0;
+}
+
+.light-theme {
+  background: #f7e3a1;
+}
+
+.background-item {
+  position: absolute;
+}
+
+#mouse-stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  transform: translate(0, 0);
+  transition: transform 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
+@media (max-width: 768px) {
+  #mouse-stalker {
+    display: none;
+  }
+}
+@media (max-width: 1599px) {
+  #mouse-stalker {
+    display: none;
+  }
+}
+
+.menu-container .menu {
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 1599px) {
+  .menu-container .menu {
+    width: 100%;
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .menu-container .menu {
+    width: 100%;
+    display: block;
+    z-index: 999;
+  }
+}
+.menu-container .menu div {
+  --speed: 14;
+  --count: 4;
+  --delay: calc(sin((var(--index) / var(--count)) * 65deg) * var(--speed) * -1s);
+  border-radius: 50%;
+  animation: jump calc(var(--speed) * 1s) var(--delay) infinite ease-in-out;
+}
+.menu-container .menu div:nth-of-type(2) {
+  color: white;
+}
+.menu-container .menu div:nth-of-type(4) {
+  color: white;
+}
+.menu-container .menu div:nth-of-type(5) {
+  color: white;
+}
+@keyframes jump {
+  50% {
+    translate: 0 -100%;
+  }
+}
+.menu-container .menu .about {
+  margin-top: 140px;
+  text-align: center;
+  font-size: 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 1000;
+  font-family: "Dosis", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-container .menu .about {
+    margin-top: 60px;
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 1599px) {
+  .menu-container .menu .about {
+    position: absolute;
+    left: 20%;
+    bottom: 59%;
+  }
+}
+@media (max-width: 768px) {
+  .menu-container .menu .about {
+    left: 14%;
+    bottom: 45%;
+  }
+}
+.menu-container .menu .about::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 20% 65%, rgb(208, 208, 208) 6%, rgba(255, 255, 255, 0) 0), radial-gradient(circle at 40% 32%, rgb(208, 208, 208) 12%, rgba(255, 255, 255, 0) 0), radial-gradient(circle at 80% 74%, rgb(208, 208, 208) 12%, rgba(255, 255, 255, 0) 0), rgb(166, 166, 166);
+  border-radius: 50%;
+  left: 108px;
+  top: -30px;
+  animation: satellite 5s infinite linear;
+  z-index: 1;
+}
+@keyframes satellite {
+  49% {
+    z-index: 1;
+  }
+  50% {
+    z-index: -1;
+    transform: translateX(-50px) translateY(110px);
+  }
+  100% {
+    z-index: -1;
+  }
+}
+@media (max-width: 768px) {
+  .menu-container .menu .about::before {
+    width: 10px;
+    height: 10px;
+    left: 70px;
+  }
+}
+.menu-container .menu .light-theme-menu-text-about {
+  color: rgb(64, 64, 64);
+}
+.menu-container .menu .light-theme-menu-text-about::before {
+  background: radial-gradient(circle at 20% 65%, rgb(85, 85, 85) 6%, rgba(255, 255, 255, 0) 0), radial-gradient(circle at 40% 32%, rgb(85, 85, 85) 12%, rgba(255, 255, 255, 0) 0), radial-gradient(circle at 80% 74%, rgb(85, 85, 85) 12%, rgba(255, 255, 255, 0) 0), rgb(59, 129, 173);
+}
+.menu-container .menu .works {
+  margin-top: 140px;
+  text-align: center;
+  font-size: 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 1000;
+  font-family: "Dosis", sans-serif;
+  color: white;
+  cursor: pointer;
+  margin-left: 35px;
+}
+@media (max-width: 768px) {
+  .menu-container .menu .works {
+    margin-top: 60px;
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 1599px) {
+  .menu-container .menu .works {
+    position: absolute;
+    top: 59%;
+    left: 20%;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .menu-container .menu .works {
+    top: 63%;
+    left: 14%;
+    margin-left: 0px;
+  }
+}
+.menu-container .menu .cssart {
+  margin-top: 140px;
+  text-align: center;
+  font-size: 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 1000;
+  font-family: "Dosis", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-container .menu .cssart {
+    margin-top: 60px;
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 1599px) {
+  .menu-container .menu .cssart {
+    position: absolute;
+    bottom: 59%;
+    right: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .menu-container .menu .cssart {
+    right: 14%;
+    bottom: 45%;
+  }
+}
+.menu-container .menu .contact {
+  margin-top: 140px;
+  text-align: center;
+  font-size: 60px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 1000;
+  font-family: "Dosis", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-container .menu .contact {
+    margin-top: 60px;
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 1599px) {
+  .menu-container .menu .contact {
+    position: absolute;
+    top: 59%;
+    right: 20%;
+  }
+}
+@media (max-width: 768px) {
+  .menu-container .menu .contact {
+    top: 63%;
+    right: 14%;
+  }
+}
+.menu-container .menu .icon {
+  margin-left: 45px;
+  position: relative;
+  width: 280px;
+  height: 280px;
+  background-color: #1e1f31;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+@media (max-width: 1599px) {
+  .menu-container .menu .icon {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .menu-container .menu .icon {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+}
+.menu-container .menu .icon .icon-img {
+  width: 370px;
+  height: 370px;
+  background-image: url(../img/icon.png);
+  background-repeat: no-repeat;
+  background-size: 280px;
+}
+@media (max-width: 768px) {
+  .menu-container .menu .icon .icon-img {
+    margin: 0;
+    width: 150px;
+    height: 150px;
+    background-size: 100px;
+  }
+}
+.menu-container .menu .icon .icon-img-light {
+  background-image: url(../img/icon2.png);
+}
+.menu-container .menu .icon .theme-btn {
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  background-color: #f5f5f5;
+  position: absolute;
+  top: 208px;
+  left: 208px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.3em rgba(254, 243, 229, 0.3), 0 0 0 0.6em rgba(255, 242, 229, 0.15), 0 0 0 0.9em rgba(244, 241, 232, 0.1);
+}
+@media (max-width: 768px) {
+  .menu-container .menu .icon .theme-btn {
+    width: 30px;
+    height: 30px;
+    top: -5%;
+    left: -25%;
+    box-shadow: 0 0 0 0.2em rgba(254, 243, 229, 0.3), 0 0 0 0.5em rgba(255, 242, 229, 0.15), 0 0 0 0.8em rgba(244, 241, 232, 0.1);
+  }
+}
+.menu-container .menu .icon .theme-btn::before {
+  position: absolute;
+  content: "";
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 37%, #f5f5f5 45%, rgba(255, 255, 255, 0) 48%), radial-gradient(circle at 50% 50%, rgb(63, 83, 125) 80%, rgba(255, 255, 255, 0) 0);
+  top: 8px;
+  left: 8px;
+}
+@media (max-width: 768px) {
+  .menu-container .menu .icon .theme-btn::before {
+    width: 23px;
+    height: 23px;
+    top: 3.3px;
+    left: 4px;
+  }
+}
+.menu-container .menu .icon .theme-btn:active {
+  transform: translate(2px, 2px);
+}
+.menu-container .menu .icon .light-theme-btn {
+  background-color: rgb(234, 141, 55);
+  box-shadow: 0 0 0 0.3em rgba(255, 179, 86, 0.3), 0 0 0 0.6em rgba(240, 132, 23, 0.15), 0 0 0 0.9em rgba(223, 184, 43, 0.1);
+}
+.menu-container .menu .icon .light-theme-btn::before {
+  background: radial-gradient(circle at 70% 37%, rgb(234, 141, 55) 45%, rgba(255, 255, 255, 0) 48%), radial-gradient(circle at 50% 50%, #f5f5f5 80%, rgba(255, 255, 255, 0) 0);
+}
+.menu-container .menu .icon-light {
+  background-color: #b2a369;
+}
+.menu-container .menu .light-theme-menu-text p {
+  color: rgb(64, 64, 64);
+}
+
+.name {
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .name {
+    top: 10%;
+  }
+}
+.name .name-wrapper {
+  position: absolute;
+  top: -350px;
+  transform: scale(0.85);
+  z-index: 999;
+}
+@media (max-width: 1599px) {
+  .name .name-wrapper {
+    transform: scale(0.7);
+    top: -370px;
+  }
+}
+@media (max-width: 768px) {
+  .name .name-wrapper {
+    top: 0;
+    left: 50%;
+    transform: scale(0.3);
+  }
+}
+.name .name-wrapper .name-flag {
+  position: absolute;
+  width: 914px;
+  height: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.name .name-wrapper .name-flag h1 {
+  font-size: 160px;
+  font-family: "Dosis", sans-serif;
+  text-shadow: rgb(255, 255, 255) 0px 1px 5px;
+  animation: name-animation 3s infinite linear alternate;
+}
+@keyframes name-animation {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  70% {
+    color: rgb(255, 255, 255);
+  }
+  80% {
+    color: rgb(64, 55, 91);
+  }
+  100% {
+    color: rgb(64, 55, 91);
+  }
+}
+.name .name-wrapper .nameflag-light h1 {
+  text-shadow: rgb(64, 64, 64) 0px 1px 5px;
+  animation: light-name-animation 3s infinite linear alternate;
+}
+@keyframes light-name-animation {
+  0% {
+    color: rgb(64, 64, 64);
+  }
+  70% {
+    color: rgb(64, 64, 64);
+  }
+  80% {
+    color: #f7e3a1;
+  }
+  100% {
+    color: #f7e3a1;
+  }
+}/*# sourceMappingURL=style.css.map */

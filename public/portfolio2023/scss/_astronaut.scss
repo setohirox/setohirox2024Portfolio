@@ -1,0 +1,537 @@
+@mixin astronaut_head {
+
+    .astronaut-head,
+    .N-astronaut-head {
+        div {
+            width: 120px;
+            height: 100px;
+            background-color: rgb(135, 176, 175);
+            border-radius: 50%;
+
+            div {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: white;
+                left: 70px;
+                top: 15px;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 140px;
+            height: 130px;
+            background-color: white;
+            border-radius: 50%;
+            left: 5px;
+            top: -10px;
+            z-index: -1;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 95px;
+            height: 5px;
+            background-color: red;
+            left: 20px;
+            top: 102px;
+            border-radius: 30%;
+        }
+    }
+}
+
+@mixin astronaut_body {
+    width: 150px;
+    height: 180px;
+    background-color: white;
+    border-radius: 25% 42% 31% 51% / 15% 38% 39% 59%;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 48px;
+        height: 5px;
+        top: 283px;
+        left: 13px;
+        background-color: red;
+        border-radius: 30%;
+        z-index: 1;
+        transform: rotate(-15deg);
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 48px;
+        height: 5px;
+        top: 286px;
+        left: 103px;
+        background-color: red;
+        border-radius: 30%;
+        z-index: 1;
+        transform: rotate(-30deg);
+    }
+
+    &.N-astronaut-body {
+        &::before {
+            top: 273px;
+            left: 8px;
+            transform: rotate(25deg);
+        }
+
+        &::after {
+            left: 88px;
+            transform: rotate(-20deg);
+        }
+    }
+}
+
+@mixin astronaut_body-leftarm {
+    .left-arm {
+        position: absolute;
+        width: 50px;
+        height: 70px;
+        background-color: white;
+        border-radius: 45%;
+        left: -30px;
+        top: 80px;
+        transform: rotate(-45deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 120px;
+            top: -70px;
+            left: 10px;
+            background-color: white;
+            border-radius: 50%;
+            transform: rotate(25deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 45px;
+            height: 5px;
+            background-color: red;
+            border-radius: 30%;
+            transform: rotate(15deg);
+            top: 6px;
+            left: 4px;
+        }
+
+        &.N-left-arm {
+            animation: N-left-arm-animation 3s infinite linear alternate;
+
+            @keyframes N-left-arm-animation {
+                0% {
+                    transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+                }
+
+                70% {
+                    transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+                }
+
+                80% {
+                    transform: rotate(-30deg);
+                }
+
+                100% {
+                    transform: rotate(-30deg);
+                }
+            }
+
+            .N-left-hand {
+                position: absolute;
+                width: 15px;
+                height: 30px;
+                background-color: rgb(133, 133, 133);
+                top: -90px;
+                left: 40px;
+                border-radius: 50%;
+                transform: rotate(10deg);
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 25px;
+                    height: 40px;
+                    background-color: rgb(133, 133, 133);
+                    border-radius: 50%;
+                    top: -10px;
+                    left: 13px;
+                    transform: rotate(15deg);
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 29px;
+                    height: 25px;
+                    background-color: rgb(133, 133, 133);
+                    border-radius: 50%;
+                    top: 11px;
+                    left: 1px;
+                    border-bottom: solid red 3px;
+                }
+            }
+
+            .flag {
+                position: absolute;
+                width: 550px;
+                height: 20px;
+                background-color: rgb(163, 163, 163);
+                top: -90px;
+                left: -210px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 100px;
+                    height: 200px;
+                    background-color: rgb(237, 105, 105);
+                    left: 450px;
+                    top: -200px;
+                }
+            }
+        }
+        &.nameast-light {
+            animation: N-light-left-arm-animation 3s infinite linear alternate;
+
+            @keyframes N-light-left-arm-animation {
+                0% {
+                    transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+                }
+
+                70% {
+                    transform: rotate(-90deg) translateX(-30px) translateY(-10px);
+                }
+
+                80% {
+                    transform: rotate(-30deg);
+                }
+
+                100% {
+                    transform: rotate(-30deg);
+                }
+            }
+        }
+    }
+}
+
+@mixin astronaut_body-lefthand {
+    .left-hand {
+        position: absolute;
+        width: 15px;
+        height: 30px;
+        background-color: rgb(133, 133, 133);
+        top: 3px;
+        left: -65px;
+        border-radius: 50%;
+        transform: rotate(-10deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 25px;
+            height: 40px;
+            background-color: rgb(133, 133, 133);
+            border-radius: 50%;
+            top: -10px;
+            left: 13px;
+            transform: rotate(15deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 29px;
+            height: 25px;
+            background-color: rgb(133, 133, 133);
+            border-radius: 50%;
+            top: 11px;
+            left: 1px;
+            border-bottom: solid red 3px;
+        }
+    }
+}
+
+@mixin astronaut_body-rightarm {
+    .right-arm {
+        position: absolute;
+        width: 50px;
+        height: 100px;
+        background-color: white;
+        border-radius: 45%;
+        left: 115px;
+        top: 95px;
+        transform: rotate(120deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 120px;
+            top: -70px;
+            left: 10px;
+            background-color: white;
+            border-radius: 50%;
+            transform: rotate(25deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 45px;
+            height: 5px;
+            background-color: red;
+            border-radius: 30%;
+            transform: rotate(5deg);
+            top: 20px;
+            left: 3px;
+        }
+    }
+}
+
+@mixin astronaut_body-righthand {
+    .right-hand {
+        position: absolute;
+        width: 15px;
+        height: 30px;
+        background-color: rgb(133, 133, 133);
+        top: 225px;
+        left: 200px;
+        border-radius: 50%;
+        transform: scaleY(-1) rotate(15deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 25px;
+            height: 40px;
+            background-color: rgb(133, 133, 133);
+            border-radius: 50%;
+            top: -10px;
+            left: 13px;
+            transform: rotate(15deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 29px;
+            height: 25px;
+            background-color: rgb(133, 133, 133);
+            border-radius: 50%;
+            top: 11px;
+            left: 1px;
+            border-bottom: solid red 3px;
+        }
+    }
+}
+
+@mixin astronaut_body-leftleg {
+    .left-leg {
+        position: absolute;
+        width: 60px;
+        height: 100px;
+        background-color: white;
+        top: 200px;
+        left: 20px;
+        border-radius: 45%;
+        transform: rotate(35deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 100px;
+            top: 45px;
+            left: 30px;
+            background-color: white;
+            border-radius: 45%;
+            transform: rotate(-65deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 35px;
+            height: 50px;
+            background-color: rgb(133, 133, 133);
+            transform: rotate(20deg);
+            border-radius: 45%;
+            top: 95px;
+            left: 85px;
+        }
+
+        &.N-left-leg {
+            &::before {
+                width: 55px;
+                height: 140px;
+                top: 40px;
+                left: 20px;
+                transform: rotate(-35deg);
+            }
+
+            &::after {
+                transform: rotate(40deg);
+                top: 140px;
+                left: 60px;
+            }
+        }
+    }
+}
+
+@mixin astronaut_body-rightleg {
+    .right-leg {
+        position: absolute;
+        width: 55px;
+        height: 80px;
+        background-color: white;
+        top: 230px;
+        left: 90px;
+        border-radius: 45%;
+        transform: rotate(-25deg);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 100px;
+            top: 35px;
+            left: 17px;
+            background-color: white;
+            border-radius: 45%;
+            transform: rotate(-40deg);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 35px;
+            height: 50px;
+            background-color: rgb(133, 133, 133);
+            transform: rotate(50deg);
+            border-radius: 45%;
+            top: 95px;
+            left: 60px;
+        }
+
+        &.N-right-leg {
+            width: 60px;
+            height: 100px;
+            top: 200px;
+            transform: rotate(15deg);
+
+            &::before {
+                width: 55px;
+                height: 140px;
+                top: 40px;
+                left: 20px;
+                transform: rotate(-35deg);
+            }
+
+            &::after {
+                transform: rotate(40deg);
+                top: 140px;
+                left: 60px;
+            }
+        }
+    }
+}
+
+@mixin astronaut_body-middle {
+    .body-middle {
+        position: absolute;
+        width: 90px;
+        height: 65px;
+        border: solid 4px rgb(133, 133, 133);
+        left: 27px;
+        top: 150px;
+        border-radius: 15%;
+        background:
+            radial-gradient(circle at 20% 30%, white 6%, #fff0 6.5%),
+            radial-gradient(circle at 20% 30%, gray 12%, #fff0 12.5%),
+            radial-gradient(circle at 20% 70%, gray 12%, #fff0 12.5%),
+            white;
+    }
+}
+
+@mixin astronaut_body-back {
+    .body-back {
+        position: absolute;
+        width: 100px;
+        height: 150px;
+        background-color: rgb(226, 226, 226);
+        border: solid 3px gray;
+        border-radius: 32%;
+        z-index: -2;
+        left: 80px;
+        top: 80px;
+    }
+}
+
+.astronaut {
+    transform: scale(0.2);
+
+    &.N-astronaut {
+        position: absolute;
+        top: -141px;
+        left: 83px;
+        z-index: -1;
+    }
+
+    @include res(pc) {
+        @include astronaut_head;
+
+        .astronaut-body {
+            @include astronaut_body;
+            @include astronaut_body-leftarm;
+            @include astronaut_body-lefthand;
+            @include astronaut_body-rightarm;
+            @include astronaut_body-righthand;
+            @include astronaut_body-leftleg;
+            @include astronaut_body-rightleg;
+            @include astronaut_body-middle;
+            @include astronaut_body-back;
+        }
+    }
+
+    @include res(medium) {
+        @include astronaut_head;
+
+        .astronaut-body {
+            @include astronaut_body;
+            @include astronaut_body-leftarm;
+            @include astronaut_body-lefthand;
+            @include astronaut_body-rightarm;
+            @include astronaut_body-righthand;
+            @include astronaut_body-leftleg;
+            @include astronaut_body-rightleg;
+            @include astronaut_body-middle;
+            @include astronaut_body-back;
+        }
+    }
+
+    @include res(mobile) {
+        @include astronaut_head;
+
+        .astronaut-body {
+            @include astronaut_body;
+            @include astronaut_body-leftarm;
+            @include astronaut_body-lefthand;
+            @include astronaut_body-rightarm;
+            @include astronaut_body-righthand;
+            @include astronaut_body-leftleg;
+            @include astronaut_body-rightleg;
+            @include astronaut_body-middle;
+            @include astronaut_body-back;
+        }
+    }
+}

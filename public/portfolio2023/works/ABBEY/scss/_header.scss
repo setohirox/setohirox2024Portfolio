@@ -1,0 +1,154 @@
+@mixin headersize($headerlogosize) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    color: #f9d85f;
+    .headerwrap {
+        padding: 2.25rem 5% 0rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-logo {
+            font-size: $headerlogosize;
+        }
+        a:link {
+            color: inherit;
+        }
+        a:visited {
+            color: inherit;
+        }
+        a:hover {
+            color: inherit;
+        }
+        a:active {
+            color: inherit;
+        }
+        .header-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+@mixin headernavsize($navfontsize, $navmargin) {
+    .header-nav {
+        a {
+            margin-left: $navmargin;
+            font-size: $navfontsize;
+        }
+    }
+}
+
+@mixin hamburgermenu {
+    .headerwrap {
+        .hamburger {
+            display: block;
+            cursor: pointer;
+
+            span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                transition: all 0.3s ease-in-out;
+                background: #f9d85f;
+            }
+        }
+
+        .active {
+            span {
+                &:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
+
+        .header-nav {
+            position: fixed;
+            left: -100%;
+            top: 50%;
+            transform: translateY(-50%);
+            gap: 0;
+            flex-direction: column;
+            width: 100%;
+            padding: 100% 0px;
+            text-align: center;
+            transition: 0.3s;
+            background-color: #ffffff92;
+            .nav-item {
+                margin: 16px 0;
+
+                a {
+                    color: #000;
+                }
+            }
+        }
+
+        .active {
+            left: 0;
+        }
+    }
+}
+
+#header {
+    @include res(xl) {
+        @include headersize(2.5rem);
+        @include headernavsize(1.5rem, 2.5rem);
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    @include res(lg) {
+        @include headersize(2rem);
+        @include headernavsize(1.3rem, 2.5rem);
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    @include res(md) {
+        @include headersize(1.42rem);
+        @include headernavsize(0.96rem, 1.5rem);
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    @include res(sm) {
+        @include headersize(2rem);
+        @include hamburgermenu;
+    }
+
+    @include res(xs) {
+        @include headersize(1.8rem);
+        @include hamburgermenu;
+    }
+}
+
+.hbgwhite{
+    background: #fff;
+}
+
+.hbmenuspan{
+    background: #000 !important;
+}
+
+.hccblack{
+    color: #000;
+}

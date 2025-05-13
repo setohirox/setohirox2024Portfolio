@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'PARALLELS';
+    src: url('~/assets/fonts/PARALLELS.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'PARALLELS', sans-serif;
+}
