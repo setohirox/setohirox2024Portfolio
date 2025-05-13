@@ -1,5 +1,8 @@
 # setohirox2024Portfolio
 
+
+🎯 **公開サイト**: [https://setohiro.com](https://setohiro.com)
+
 ポートフォリオサイト（2024年度版）
 
 ## 🔧 使用技術
