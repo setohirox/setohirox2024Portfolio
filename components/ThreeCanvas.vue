@@ -81,7 +81,6 @@ onMounted(() => {
         mixer.addEventListener("finished", onAnimationFinished);
       },
       function (error) {
-        console.log(error);
       }
     );
 
