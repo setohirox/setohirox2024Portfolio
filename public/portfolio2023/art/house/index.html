@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House</title>
+</head>
+
+<body>
+    <style>
+        :root{
+            --color1: white;
+            --color2: rgba(121, 121, 121, 1);
+            --color3: rgba(210, 243, 255, 1);
+            --color4: rgba(22, 239, 255, 1);
+            --color5: rgba(120, 98, 79, 1);
+            --color6: rgba(53, 53, 53, 1);
+        }
+        body{
+            background-color: rgb(253, 255, 231);
+        }
+        @media screen and (max-width:768px){
+            body{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: scale(0.5) translate(-50%,-50%);
+            }
+        }
+        .house {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            border: solid 10px rgb(212, 134, 151);
+            background:
+                linear-gradient(var(--color1), var(--color1)) 367px 467px / 26px 19px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 353px 455px / 158px 93px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 183px 455px / 48px 93px no-repeat no-repeat,
+                radial-gradient(ellipse at 50% 50%, rgba(255, 198, 69, 1) 38.54%, rgba(255, 255, 255, 0) 44.1%) 295px 485px / 18px 18px no-repeat no-repeat,
+                linear-gradient(var(--color5), var(--color5)) 255px 450px / 60px 80px no-repeat no-repeat,
+                linear-gradient(var(--color6), var(--color6)) 252px 446px / 66px 84px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 240px 530px / 90px 10px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 416px 308px / 2px 74px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 284px 308px / 2px 74px no-repeat no-repeat,
+                linear-gradient(0deg, var(--color3) 0%, var(--color4) 100%) 382px 310px / 70px 70px no-repeat no-repeat,
+                linear-gradient(0deg, var(--color3) 0%, var(--color4) 100%) 250px 310px / 70px 70px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 380px 308px / 74px 74px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 248px 308px / 74px 74px no-repeat no-repeat,
+                linear-gradient(var(--color2), var(--color2)) 248px 308px / 74px 74px no-repeat no-repeat,
+                conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 32%, rgba(247, 243, 205, 1) 32.1%, rgba(247, 243, 205, 1) 68%, rgba(255, 255, 255, 0) 68.1%) 200px 150px / 300px 150px no-repeat no-repeat,
+                conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 32%, rgba(226, 92, 58, 1) 32.1%, rgba(226, 92, 58, 1) 68%, rgba(255, 255, 255, 0) 68.1%) 175px 130px / 350px 170px no-repeat no-repeat,
+                linear-gradient(rgba(247, 243, 205, 1), rgba(247, 243, 205, 1)) 210px 290px / 280px 250px no-repeat no-repeat,
+                linear-gradient(0deg, rgba(71, 237, 86, 1) 35%, rgba(50, 190, 255, 1) 35.1%) 0px 0px / 700px 700px no-repeat no-repeat;
+        }
+    </style>
+    <div class="house"></div>
+</body>
+
+</html>

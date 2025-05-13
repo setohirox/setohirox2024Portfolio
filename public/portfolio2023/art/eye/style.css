@@ -1,0 +1,1367 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FEDCBD;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1852px) {
+  body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1522px) {
+  body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.7) translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 980px) {
+  body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.5) translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.3) translate(-50%, -50%);
+  }
+}
+.eyec {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.eyec .matsud {
+  z-index: 1;
+}
+.eyec .matsud .matsu0 {
+  position: absolute;
+  top: 205px;
+  left: 700px;
+  width: 70px;
+  height: 40px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(23deg);
+}
+.eyec .matsud .matsu0::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 20px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsud .matsu0::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 40px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-20deg);
+}
+.eyec .matsud .matsu1 {
+  position: absolute;
+  top: 263px;
+  left: 666px;
+  width: 50px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(37deg);
+}
+.eyec .matsud .matsu1::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 20px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsud .matsu1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  top: 30px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) scale(1, -1);
+}
+.eyec .matsud .matsu2 {
+  position: absolute;
+  top: 310px;
+  left: 635px;
+  width: 50px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(36deg);
+}
+.eyec .matsud .matsu2::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -10px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) scale(1, -1);
+}
+.eyec .matsud .matsu2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 30px;
+  left: 32px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsud .matsu3 {
+  position: absolute;
+  top: 368px;
+  left: 590px;
+  width: 50px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(40deg);
+}
+.eyec .matsud .matsu3::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 39px;
+  top: 20px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-30deg);
+}
+.eyec .matsud .matsu3::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 40px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsud .matsu4 {
+  position: absolute;
+  top: 428px;
+  left: 534px;
+  width: 50px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(30deg);
+}
+.eyec .matsud .matsu4::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 30px;
+  left: 5px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(20deg);
+}
+.eyec .matsud .matsu4::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  top: 47px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-10deg);
+}
+.eyec .matsud .matsu5 {
+  position: absolute;
+  top: 512px;
+  left: 380px;
+  width: 50px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(65deg);
+}
+.eyec .matsud .matsu5::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 20px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-10deg);
+}
+.eyec .matsud .matsu5::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 40px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-30deg);
+}
+.eyec .matsud .matsu6 {
+  position: absolute;
+  top: 536px;
+  left: 295px;
+  width: 50px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(60deg);
+}
+.eyec .matsud .matsu6::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 30px;
+  left: 5px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsud .matsu6::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 49px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsud .matsu7 {
+  position: absolute;
+  top: 480px;
+  left: 455px;
+  width: 50px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(60deg);
+}
+.eyec .matsud .matsu7::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: -7px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) scale(1, -1);
+}
+.eyec .matsud .matsu7::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 40px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsuo {
+  z-index: 1;
+}
+.eyec .matsuo .matsut1 {
+  position: absolute;
+  top: -30px;
+  left: 276px;
+  width: 90px;
+  height: 65px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-100deg) scale(1.2);
+}
+.eyec .matsuo .matsut1::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  top: -48px;
+  left: 18px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsuo .matsut1::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  top: -40px;
+  left: 33px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsuo .matsut2 {
+  position: absolute;
+  top: -29px;
+  left: 285px;
+  width: 100px;
+  height: 40px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-90deg) scale(1.2);
+}
+.eyec .matsuo .matsut2::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 10px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsuo .matsut2::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  top: -10px;
+  left: 26px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(20deg);
+}
+.eyec .matsuo .matsut3 {
+  position: absolute;
+  top: -70px;
+  left: 260px;
+  width: 120px;
+  height: 120px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-30deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut3::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: -10px;
+  left: 50px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(20deg);
+}
+.eyec .matsuo .matsut3::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  top: 20px;
+  left: 50px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(50deg);
+}
+.eyec .matsuo .matsut4 {
+  position: absolute;
+  top: -12px;
+  left: 330px;
+  width: 91px;
+  height: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-100deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut4::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  top: -30px;
+  left: 7px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-40deg);
+}
+.eyec .matsuo .matsut4::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  top: 16px;
+  left: 40px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsuo .matsut5 {
+  position: absolute;
+  top: -15px;
+  left: 380px;
+  width: 70px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-85deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut5::before {
+  content: "";
+  position: absolute;
+  width: 128px;
+  height: 40px;
+  top: 18px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsuo .matsut5::after {
+  content: "";
+  position: absolute;
+  width: 78px;
+  height: 40px;
+  top: 30px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg);
+}
+.eyec .matsuo .matsut6 {
+  position: absolute;
+  top: -30px;
+  left: 400px;
+  width: 70px;
+  height: 100px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-90deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut6::before {
+  content: "";
+  position: absolute;
+  width: 123px;
+  height: 50px;
+  top: 17px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsuo .matsut6::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  top: 30px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) scale(0.8) rotate(20deg);
+}
+.eyec .matsuo .matsut7 {
+  position: absolute;
+  top: -35px;
+  left: 430px;
+  width: 140px;
+  height: 50px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-75deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut7::before {
+  content: "";
+  position: absolute;
+  width: 96px;
+  height: 40px;
+  top: 16px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-11deg);
+}
+.eyec .matsuo .matsut7::after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 40px;
+  top: 20px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(15deg);
+}
+.eyec .matsuo .matsut8 {
+  position: absolute;
+  top: 10px;
+  left: 485px;
+  width: 70px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-70deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut8::before {
+  content: "";
+  position: absolute;
+  width: 105px;
+  height: 60px;
+  top: 20px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsuo .matsut8::after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 20px;
+  top: 35px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-40deg);
+}
+.eyec .matsuo .matsut9 {
+  position: absolute;
+  top: 18px;
+  left: 523px;
+  width: 100px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-40deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut9::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 50px;
+  top: 10px;
+  left: 12px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(30deg);
+}
+.eyec .matsuo .matsut9::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  top: 30px;
+  left: 17px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsuo .matsut10 {
+  position: absolute;
+  top: 55px;
+  left: 576px;
+  width: 70px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-40deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut10::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 18px;
+  left: 12px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsuo .matsut10::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  top: 40px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg);
+}
+.eyec .matsuo .matsut10-2 {
+  position: absolute;
+  top: 5px;
+  left: 499px;
+  width: 100px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-60deg) scale(1.1, -1);
+}
+.eyec .matsuo .matsut10-2::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: -10px;
+  left: 18px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) scale(1, -1);
+}
+.eyec .matsuo .matsut10-2::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  top: 70px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg) scale(1, -1);
+}
+.eyec .matsuo .matsut11 {
+  position: absolute;
+  top: 77px;
+  left: 610px;
+  width: 70px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-60deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut11::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 20px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0);
+}
+.eyec .matsuo .matsut11::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  top: 20px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-30deg);
+}
+.eyec .matsuo .matsut11-2 {
+  position: absolute;
+  top: 102px;
+  left: 610px;
+  width: 100px;
+  height: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-30deg) scale(0.9);
+}
+.eyec .matsuo .matsut11-2::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  top: -87px;
+  left: 4px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-20deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut11-2::after {
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  top: -55px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-30deg);
+}
+.eyec .matsuo .matsut12 {
+  position: absolute;
+  top: 100px;
+  left: 660px;
+  width: 80px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-40deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut12::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 50px;
+  top: 15px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-5deg);
+}
+.eyec .matsuo .matsut12::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  top: 38px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(40deg);
+}
+.eyec .matsuo .matsut12-2 {
+  position: absolute;
+  top: 80px;
+  left: 640px;
+  width: 96px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-60deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut12-2::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 43px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-8deg);
+}
+.eyec .matsuo .matsut12-2::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  top: 38px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(40deg);
+}
+.eyec .matsuo .matsut13 {
+  position: absolute;
+  top: 123px;
+  left: 700px;
+  width: 100px;
+  height: 60px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-30deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut13::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 10px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(3deg);
+}
+.eyec .matsuo .matsut13::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 40px;
+  top: 25px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsuo .matsut13-2 {
+  position: absolute;
+  top: 150px;
+  left: 700px;
+  width: 120px;
+  height: 40px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-10deg) scale(1.2, -1);
+}
+.eyec .matsuo .matsut13-2::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  top: 10px;
+  left: 4px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-10deg);
+}
+.eyec .matsuo .matsut13-2::after {
+  content: "";
+  position: absolute;
+  width: 138px;
+  height: 40px;
+  top: -15px;
+  left: 20px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-24deg);
+}
+.eyec .matsuo .matsut14 {
+  position: absolute;
+  top: -31px;
+  left: 239px;
+  width: 121px;
+  height: 45px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-80deg) scale(1.2);
+}
+.eyec .matsuo .matsut14::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  top: -39px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-50deg);
+}
+.eyec .matsuo .matsut14::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  top: -60px;
+  left: 23px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0);
+}
+.eyec .matsuo .matsut15 {
+  position: absolute;
+  top: -10px;
+  left: 169px;
+  width: 121px;
+  height: 45px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-130deg) scale(1.1);
+}
+.eyec .matsuo .matsut15::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  top: -18px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(40deg);
+}
+.eyec .matsuo .matsut15::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  top: 8px;
+  left: 33px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg);
+}
+.eyec .matsuo .matsut16 {
+  position: absolute;
+  top: 9px;
+  left: 142px;
+  width: 101px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-90deg) scale(1.1);
+}
+.eyec .matsuo .matsut16::before {
+  content: "";
+  position: absolute;
+  width: 89px;
+  height: 60px;
+  top: -1px;
+  left: 27px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-30deg);
+}
+.eyec .matsuo .matsut16::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  top: -36px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(30deg);
+}
+.eyec .matsuo .matsut17 {
+  position: absolute;
+  top: 9px;
+  left: 122px;
+  width: 101px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-120deg) scale(1.1);
+}
+.eyec .matsuo .matsut17::before {
+  content: "";
+  position: absolute;
+  width: 79px;
+  height: 60px;
+  top: -8px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(20deg);
+}
+.eyec .matsuo .matsut17::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: -20px;
+  left: 33px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(30deg);
+}
+.eyec .matsuo .matsut18 {
+  position: absolute;
+  top: 30px;
+  left: 92px;
+  width: 101px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-140deg) scale(1.03);
+}
+.eyec .matsuo .matsut18::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  top: -6px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(60deg);
+}
+.eyec .matsuo .matsut18::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  top: -18px;
+  left: 39px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(30deg);
+}
+.eyec .matsuo .matsut19 {
+  position: absolute;
+  top: 65px;
+  left: 72px;
+  width: 66px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-140deg) scale(1.14);
+}
+.eyec .matsuo .matsut19::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  top: 20px;
+  left: 12px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(30deg);
+}
+.eyec .matsuo .matsut19::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  top: 10px;
+  left: 27px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(30deg);
+}
+.eyec .matsuo .matsut20 {
+  position: absolute;
+  top: 72px;
+  left: 65px;
+  width: 60px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-110deg) scale(1.14);
+}
+.eyec .matsuo .matsut20::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  top: 5px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-20deg);
+}
+.eyec .matsuo .matsut20::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 30px;
+  top: -1px;
+  left: 23px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(30deg);
+}
+.eyec .matsuo .matsut21 {
+  position: absolute;
+  top: 92px;
+  left: 35px;
+  width: 60px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-110deg) scale(1.14);
+}
+.eyec .matsuo .matsut21::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: 5px;
+  left: 15px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-40deg);
+}
+.eyec .matsuo .matsut21::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  top: 7px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(20deg);
+}
+.eyec .matsuo .matsut22 {
+  position: absolute;
+  top: 97px;
+  left: 13px;
+  width: 70px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-130deg) scale(1.14);
+}
+.eyec .matsuo .matsut22::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: -16px;
+  left: 9px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-40deg);
+}
+.eyec .matsuo .matsut22::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  top: -10px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(20deg);
+}
+.eyec .matsuo .matsut23 {
+  position: absolute;
+  top: 110px;
+  left: 9px;
+  width: 70px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-90deg) scale(1.14);
+}
+.eyec .matsuo .matsut23::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: -16px;
+  left: 9px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-40deg);
+}
+.eyec .matsuo .matsut23::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  top: -35px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(-60deg);
+}
+.eyec .matsuo .matsut24 {
+  position: absolute;
+  top: 130px;
+  left: -28px;
+  width: 70px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-130deg) scale(1.14);
+}
+.eyec .matsuo .matsut24::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: -16px;
+  left: 9px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-40deg);
+}
+.eyec .matsuo .matsut24::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: 3px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg);
+}
+.eyec .matsuo .matsut25 {
+  position: absolute;
+  top: 157px;
+  left: -30px;
+  width: 60px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-130deg) scale(1.01);
+}
+.eyec .matsuo .matsut25::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: -15px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-40deg);
+}
+.eyec .matsuo .matsut25::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  top: -21px;
+  left: 30px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg);
+}
+.eyec .matsuo .matsut26 {
+  position: absolute;
+  top: 176px;
+  left: -41px;
+  width: 60px;
+  height: 35px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-110deg) scale(0.98);
+}
+.eyec .matsuo .matsut26::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top: -15px;
+  left: 10px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-30deg);
+}
+.eyec .matsuo .matsut26::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 30px;
+  top: -31px;
+  left: 14px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg);
+}
+.eyec .matsuo .matsut27 {
+  position: absolute;
+  top: 200px;
+  left: -51px;
+  width: 54px;
+  height: 32px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-110deg) scale(0.98);
+}
+.eyec .matsuo .matsut27::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: -16px;
+  left: 9px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-30deg);
+}
+.eyec .matsuo .matsut27::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  top: -21px;
+  left: 16px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(10deg);
+}
+.eyec .matsuo .matsut28 {
+  position: absolute;
+  top: 230px;
+  left: -61px;
+  width: 43px;
+  height: 32px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: rotate(-110deg) scale(0.98);
+}
+.eyec .matsuo .matsut28::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 20px;
+  top: -16px;
+  left: 9px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-1em, 0.2em, 0) rotate(-20deg);
+}
+.eyec .matsuo .matsut28::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  top: -21px;
+  left: 13px;
+  box-shadow: -0.1em -0.1em 0 0 #000000;
+  border-radius: 50%;
+  transform: translate3d(-2em, 0.4em, 0) rotate(21deg);
+}
+.eyec .eye-top {
+  z-index: -1;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 75% 0;
+  background: white;
+  overflow: hidden;
+  transform: rotate(32deg);
+  box-shadow: 0px -15px 5px 0px rgba(0, 0, 0, 0.75), 0px 0px 20px 12px rgba(0, 0, 0, 0.75), 20px 20px 10px 0px #FEDCBD, 30px 30px 10px -10px rgba(156, 135, 117, 0.431372549), -50px -50px 0px 0px #FEDCBD, -65px -60px 3px -5px rgba(237, 173, 133, 0.75);
+}
+.eyec .eye-top .eyeh {
+  z-index: -1;
+  position: absolute;
+  top: 70px;
+  left: 70px;
+  transform: scale(0.87) rotate(-32deg);
+  border-radius: 50%;
+  width: 450px;
+  height: 500px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0) 49.31%) -28px -34px/300px 400px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0) 49.31%) 196px 160px/300px 400px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 181px 333px/30px 40px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 204px 339px/30px 40px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 270px 315px/30px 40px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 230px 336px/30px 40px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 250px 327px/30px 40px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 142px 315px/30px 40px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 163px 325px/30px 40px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, white 20.49%, rgba(255, 255, 255, 0) 34.38%) 102px 75px/141px 142px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, rgba(28, 17, 42, 0.8) 60.07%, rgb(28, 17, 42) 63.19%, rgba(255, 255, 255, 0) 67.36%) 125px 111px/200px 241px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.29) 6.25%, rgba(255, 255, 255, 0.29) 50%, rgba(255, 255, 255, 0) 51.39%) 75px 302px/300px 300px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, rgba(0, 57, 67, 0.36) 50%, rgba(255, 255, 255, 0) 51.39%) -25px -174px/500px 425px no-repeat no-repeat, radial-gradient(ellipse at 50% 50%, rgba(128, 184, 194, 0.48) 50%, rgba(255, 255, 255, 0) 51.39%) -25px 180px/500px 425px no-repeat no-repeat, linear-gradient(rgba(0, 105, 123, 0.7), rgba(0, 105, 123, 0.7)) 0px 0px/450px 500px no-repeat no-repeat, linear-gradient(0deg, rgba(255, 255, 255, 0) 37.15%, rgb(1, 87, 102) 63.54%) 0px 0px/450px 500px no-repeat no-repeat;
+}
+.eyec .eye-top .eyehq {
+  z-index: 1;
+  width: 600px;
+  height: 600px;
+  border-radius: 75% 0;
+  background: linear-gradient(335deg, rgba(255, 255, 255, 0.1) 40%, rgba(0, 0, 0, 0.9) 100%);
+  box-shadow: inset 5px 17px 5px 0px rgba(0, 0, 0, 0.75);
+}/*# sourceMappingURL=style.css.map */

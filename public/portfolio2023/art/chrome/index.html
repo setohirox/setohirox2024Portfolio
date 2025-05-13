@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chrome</title>
+</head>
+
+<body>
+    <style>
+        :root{
+            --blue:rgba(19, 116, 233, 1);
+            --yellow: rgba(251, 194, 15, 1);
+            --red: rgba(228, 56, 42, 1);
+            --green: rgba(28, 148, 64, 1);
+        }
+        body{
+            background-color: rgb(25, 135, 131);
+        }
+        @media screen and (max-width:768px){
+            body{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: scale(0.5) translate(-50%,-50%);
+            }
+        }
+        .chrome {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background:
+                radial-gradient(ellipse at 50% 50%, var(--blue) 26%, rgba(255, 255, 255, 0) 26.2%) 0px 0px / 500px 500px no-repeat no-repeat,
+                radial-gradient(ellipse at 50% 50%, white 35%, rgba(255, 255, 255, 0) 35.2%) 0px 0px / 500px 500px no-repeat no-repeat,
+                linear-gradient(var(--red), var(--red)) 155px 114px / 100px 100px no-repeat no-repeat,
+                conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0) 88%, var(--red) 88.2%) -77px 98px / 500px 500px no-repeat no-repeat,
+                conic-gradient(from 0deg at 50% 50%, var(--red) 0%, var(--red) 100%) 0px 0px / 500px 127px no-repeat no-repeat,
+                linear-gradient(var(--yellow), var(--yellow)) 261px 116px / 138px 150px no-repeat no-repeat,
+                conic-gradient(from 0deg at 50% 50%, rgba(0, 0, 0, 0) 56.9%, var(--green) 57%) 118px 37px / 500px 500px no-repeat no-repeat,
+                linear-gradient(var(--yellow), var(--yellow)) 250px 0px / 250px 500px no-repeat no-repeat,
+                linear-gradient(var(--green), var(--green)) 0px 0px / 250px 500px no-repeat no-repeat;
+        }
+    </style>
+    <div class="chrome"></div>
+</body>
+
+</html>

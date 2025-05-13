@@ -1,0 +1,57 @@
+@keyframes move {
+  from {
+    transform: rotate3d(0.5, 0.5, 0.5, 360deg);
+  }
+  to {
+    transform: rotate3d(0deg);
+  }
+}
+body {
+  background: pink;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+.container .block {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: move 5s linear 0s infinite;
+}
+.container .block--face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.container .block--face.top {
+  background: linear-gradient(rgb(67, 117, 34), rgb(67, 117, 34)) 150px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(91, 157, 47), rgb(91, 157, 47)) 100px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(63, 105, 41), rgb(63, 105, 41)) 50px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(81, 140, 41), rgb(81, 140, 41)) 0px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(87, 143, 52), rgb(87, 143, 52)) 150px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(64, 115, 32), rgb(64, 115, 32)) 100px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(76, 132, 40), rgb(76, 132, 40)) 50px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(60, 104, 32), rgb(60, 104, 32)) 0px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(64, 115, 35), rgb(64, 115, 35)) 150px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(78, 130, 44), rgb(78, 130, 44)) 100px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(77, 131, 44), rgb(77, 131, 44)) 50px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(79, 135, 45), rgb(79, 135, 45)) 0px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(67, 118, 42), rgb(67, 118, 42)) 150px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(80, 145, 51), rgb(80, 145, 51)) 100px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(63, 104, 34), rgb(63, 104, 34)) 50px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(69, 119, 32), rgb(69, 119, 32)) 0px 0px/50px 50px no-repeat no-repeat;
+  transform: rotateX(90deg) translateZ(100px);
+}
+.container .block--face.right {
+  background: linear-gradient(rgb(93, 62, 41), rgb(93, 62, 41)) 150px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(48, 35, 12), rgb(48, 35, 12)) 100px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 52, 30), rgb(70, 52, 30)) 50px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(113, 80, 53), rgb(113, 80, 53)) 0px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(116, 79, 51), rgb(116, 79, 51)) 150px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(111, 82, 47), rgb(111, 82, 47)) 100px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(51, 31, 19), rgb(51, 31, 19)) 50px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 59, 41), rgb(93, 59, 41)) 0px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(71, 51, 31), rgb(71, 51, 31)) 150px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(90, 61, 40), rgb(90, 61, 40)) 100px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(73, 50, 34), rgb(73, 50, 34)) 50px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(52, 31, 20), rgb(52, 31, 20)) 0px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 98, 42), rgb(70, 98, 42)) 150px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 121, 61), rgb(93, 121, 61)) 100px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(60, 104, 29), rgb(60, 104, 29)) 50px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(59, 102, 39), rgb(59, 102, 39)) 0px 0px/50px 50px no-repeat no-repeat;
+  transform: rotateY(90deg) translateZ(100px);
+}
+.container .block--face.bottom {
+  background: linear-gradient(rgb(51, 31, 19), rgb(51, 31, 19)) 150px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(108, 82, 46), rgb(108, 82, 46)) 100px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(108, 83, 53), rgb(108, 83, 53)) 50px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 36, 25), rgb(70, 36, 25)) 0px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(73, 50, 33), rgb(73, 50, 33)) 150px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(92, 60, 39), rgb(92, 60, 39)) 100px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(73, 50, 31), rgb(73, 50, 31)) 50px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(58, 36, 20), rgb(58, 36, 20)) 0px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(108, 83, 53), rgb(108, 83, 53)) 150px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(72, 51, 32), rgb(72, 51, 32)) 100px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(51, 31, 19), rgb(51, 31, 19)) 50px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 58, 42), rgb(93, 58, 42)) 0px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(85, 63, 40), rgb(85, 63, 40)) 150px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(49, 34, 14), rgb(49, 34, 14)) 100px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 52, 31), rgb(70, 52, 31)) 50px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(108, 82, 46), rgb(108, 82, 46)) 0px 0px/50px 50px no-repeat no-repeat;
+  transform: rotateX(-90deg) translateZ(100px);
+}
+.container .block--face.left {
+  background: linear-gradient(rgb(93, 62, 41), rgb(93, 62, 41)) 150px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(48, 35, 12), rgb(48, 35, 12)) 100px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 52, 30), rgb(70, 52, 30)) 50px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(113, 80, 53), rgb(113, 80, 53)) 0px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(116, 79, 51), rgb(116, 79, 51)) 150px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(111, 82, 47), rgb(111, 82, 47)) 100px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(51, 31, 19), rgb(51, 31, 19)) 50px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 59, 41), rgb(93, 59, 41)) 0px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(71, 51, 31), rgb(71, 51, 31)) 150px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(90, 61, 40), rgb(90, 61, 40)) 100px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(73, 50, 34), rgb(73, 50, 34)) 50px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(52, 31, 20), rgb(52, 31, 20)) 0px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 98, 42), rgb(70, 98, 42)) 150px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 121, 61), rgb(93, 121, 61)) 100px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(60, 104, 29), rgb(60, 104, 29)) 50px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(59, 102, 39), rgb(59, 102, 39)) 0px 0px/50px 50px no-repeat no-repeat;
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.container .block--face.front {
+  background: linear-gradient(rgb(93, 62, 41), rgb(93, 62, 41)) 150px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(48, 35, 12), rgb(48, 35, 12)) 100px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 52, 30), rgb(70, 52, 30)) 50px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(113, 80, 53), rgb(113, 80, 53)) 0px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(116, 79, 51), rgb(116, 79, 51)) 150px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(111, 82, 47), rgb(111, 82, 47)) 100px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(51, 31, 19), rgb(51, 31, 19)) 50px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 59, 41), rgb(93, 59, 41)) 0px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(71, 51, 31), rgb(71, 51, 31)) 150px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(90, 61, 40), rgb(90, 61, 40)) 100px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(73, 50, 34), rgb(73, 50, 34)) 50px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(52, 31, 20), rgb(52, 31, 20)) 0px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 98, 42), rgb(70, 98, 42)) 150px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 121, 61), rgb(93, 121, 61)) 100px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(60, 104, 29), rgb(60, 104, 29)) 50px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(59, 102, 39), rgb(59, 102, 39)) 0px 0px/50px 50px no-repeat no-repeat;
+  transform: rotateY(0deg) translateZ(100px);
+}
+.container .block--face.back {
+  background: linear-gradient(rgb(93, 62, 41), rgb(93, 62, 41)) 150px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(48, 35, 12), rgb(48, 35, 12)) 100px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 52, 30), rgb(70, 52, 30)) 50px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(113, 80, 53), rgb(113, 80, 53)) 0px 150px/50px 50px no-repeat no-repeat, linear-gradient(rgb(116, 79, 51), rgb(116, 79, 51)) 150px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(111, 82, 47), rgb(111, 82, 47)) 100px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(51, 31, 19), rgb(51, 31, 19)) 50px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 59, 41), rgb(93, 59, 41)) 0px 100px/50px 50px no-repeat no-repeat, linear-gradient(rgb(71, 51, 31), rgb(71, 51, 31)) 150px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(90, 61, 40), rgb(90, 61, 40)) 100px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(73, 50, 34), rgb(73, 50, 34)) 50px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(52, 31, 20), rgb(52, 31, 20)) 0px 50px/50px 50px no-repeat no-repeat, linear-gradient(rgb(70, 98, 42), rgb(70, 98, 42)) 150px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(93, 121, 61), rgb(93, 121, 61)) 100px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(60, 104, 29), rgb(60, 104, 29)) 50px 0px/50px 50px no-repeat no-repeat, linear-gradient(rgb(59, 102, 39), rgb(59, 102, 39)) 0px 0px/50px 50px no-repeat no-repeat;
+  transform: rotateY(180deg) translateZ(100px);
+}/*# sourceMappingURL=style.css.map */
